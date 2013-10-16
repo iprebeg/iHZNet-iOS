@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="562" systemVersion="11B26" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Favorit" representedClassName="Favorit">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="idDolazniKolodvor" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="idOdlazniKolodvor" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="nazivDolazniKolodvor" optional="YES" attributeType="String"/>
+        <attribute name="nazivOdlazniKolodvor" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Favorit" positionX="-1512" positionY="-657" width="128" height="120"/>
+    </elements>
+</model>
