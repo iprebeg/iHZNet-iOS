@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BB1ED7A7-A6F0-47D7-B3FA-1D941701BA81</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iHZNet</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>01378F35-713E-4C86-8BDB-E6EF4C4C752F</key>
+		<string>https://bitbucket.com/iprebeg/iHZNet-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iHZNet.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>01378F35-713E-4C86-8BDB-E6EF4C4C752F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.com/iprebeg/iHZNet-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>01378F35-713E-4C86-8BDB-E6EF4C4C752F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01378F35-713E-4C86-8BDB-E6EF4C4C752F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iHZNet-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
