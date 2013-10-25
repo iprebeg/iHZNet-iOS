@@ -6,7 +6,6 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
-
     #define API_DEV @"http://192.168.5.99:8080"
 
     #define API_OBSOLETE @"http://proxy.prebeg.com/iProxy"
@@ -22,7 +21,6 @@
     #define kURLString [API_URL stringByAppendingString:@"/raspored?NKOD1=%d&NKDO1=%d&DT=%@&DV=%@"]
 
     #define kLiveInfoURLString [API_URL stringByAppendingString:@"/liveInfo?VL=%@"]
-
 
     #define kStajalisteTableCellHeight 30
 
