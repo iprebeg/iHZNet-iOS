@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BB1ED7A7-A6F0-47D7-B3FA-1D941701BA81</string>
+	<string>64F41A6C-C517-42D2-84C8-DB9F5C8B9FD5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>iHZNet</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>01378F35-713E-4C86-8BDB-E6EF4C4C752F</key>
-		<string>https://bitbucket.com/iprebeg/iHZNet-iOS.git</string>
+		<key>EFD1E16B-4A7B-44C8-AFF6-DCC20359F801</key>
+		<string>https://github.com/iprebeg/iHZNet-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iHZNet.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>01378F35-713E-4C86-8BDB-E6EF4C4C752F</key>
+		<key>EFD1E16B-4A7B-44C8-AFF6-DCC20359F801</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.com/iprebeg/iHZNet-iOS.git</string>
+	<string>https://github.com/iprebeg/iHZNet-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>01378F35-713E-4C86-8BDB-E6EF4C4C752F</string>
+	<string>EFD1E16B-4A7B-44C8-AFF6-DCC20359F801</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>01378F35-713E-4C86-8BDB-E6EF4C4C752F</string>
+			<string>EFD1E16B-4A7B-44C8-AFF6-DCC20359F801</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iHZNet-iOS</string>
 		</dict>
