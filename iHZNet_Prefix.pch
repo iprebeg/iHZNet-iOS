@@ -22,6 +22,7 @@
 
     #define kLiveInfoURLString [API_URL stringByAppendingString:@"/liveInfo?VL=%@"]
 
+
     #define kStajalisteTableCellHeight 30
 
     #define kProlazisteTableViewCellHeight 30
