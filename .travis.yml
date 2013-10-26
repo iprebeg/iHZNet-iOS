@@ -1,4 +1,3 @@
 language: objective-c
 xcode_sdk: iphonesimulator
-env: XCCONFIGURATION=Debug
-env: XCODEBUILD_SETTINGS="-sdk iphonesimulator"
+env: XCCONFIGURATION=Debug XCODEBUILD_SETTINGS="-sdk iphonesimulator"
