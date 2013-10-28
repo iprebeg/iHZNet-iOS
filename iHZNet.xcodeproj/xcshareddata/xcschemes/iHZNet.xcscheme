@@ -28,6 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1A17BE64181F225100FC58D0"
+               BuildableName = "iHZNet Tests.xctest"
+               BlueprintName = "iHZNet Tests"
+               ReferencedContainer = "container:iHZNet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1A17BE7B181F228700FC58D0"
+               BuildableName = "iHZNetTests.xctest"
+               BlueprintName = "iHZNetTests"
+               ReferencedContainer = "container:iHZNet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
