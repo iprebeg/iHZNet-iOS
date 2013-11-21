@@ -1,3 +1,10 @@
 language: objective-c
-#xcode_sdk: iphonesimulator
-env: XCODEBUILD_SETTINGS="-sdk iphonesimulator" #XCCONFIGURATION=Debug 
+
+before_install: 
+  - gem install cocoapods
+
+xcode_workspace: iHZNet.xcworkspace
+xcode_scheme: iHZNet
+xcode_configuration: Debug 
+#xcode_arch: i386 
+xcode_sdk: iphonesimulator
