@@ -6,7 +6,6 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
-
     #define API_DEV @"http://192.168.5.99:8080"
 
     #define API_OBSOLETE @"http://proxy.prebeg.com/iProxy"
@@ -14,8 +13,11 @@
     #define API_PRODUCTION @"http://proxy.prebeg.com"
 
     #define API API_PRODUCTION // where is your api dude
-    
-    #define API_URL [API stringByAppendingString:@"/iHZNet"] 
+ 
+    #define API_OPENSHIFT @"http://ihznet-prebeg.rhcloud.com"
+  
+    //#define API_URL [API stringByAppendingString:@"/iHZNet"] 
+    #define API_URL API_OPENSHIFT
 
     #define kURLKolodvori [API_URL stringByAppendingString:@"/listaKolodvora"]
 

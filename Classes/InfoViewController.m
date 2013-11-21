@@ -29,7 +29,7 @@
     [controller setMessageBody:@"Problem se javlja kada tražim raspored za putovanje od ... do ..., a rezultira ..." isHTML:NO];
     
     if (controller)
-        [self presentModalViewController:controller animated:YES];
+        [self presentViewController:controller animated:YES completion:nil];
     
     [controller release];
 }
@@ -40,7 +40,7 @@
     if (result == MFMailComposeResultSent)
         NSLog(@"Mail sent");
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)socialButtonPressed:(id)sender
