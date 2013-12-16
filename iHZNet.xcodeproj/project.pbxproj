@@ -149,10 +149,6 @@
 		1A179D6213CF5BC3005AADA2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1A179D6313CF5BC3005AADA2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1A17BE66181F225100FC58D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1A17BE6C181F225100FC58D0 /* iHZNet Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHZNet Tests-Info.plist"; sourceTree = "<group>"; };
-		1A17BE6E181F225100FC58D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1A17BE70181F225100FC58D0 /* iHZNet_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHZNet_Tests.m; sourceTree = "<group>"; };
-		1A17BE72181F225100FC58D0 /* iHZNet Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iHZNet Tests-Prefix.pch"; sourceTree = "<group>"; };
 		1A17BE7C181F228700FC58D0 /* iHZNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iHZNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A17BE82181F228700FC58D0 /* iHZNetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHZNetTests-Info.plist"; sourceTree = "<group>"; };
 		1A17BE84181F228700FC58D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -412,25 +408,6 @@
 			name = Service;
 			sourceTree = "<group>";
 		};
-		1A17BE6A181F225100FC58D0 /* iHZNet Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1A17BE70181F225100FC58D0 /* iHZNet_Tests.m */,
-				1A17BE6B181F225100FC58D0 /* Supporting Files */,
-			);
-			path = "iHZNet Tests";
-			sourceTree = "<group>";
-		};
-		1A17BE6B181F225100FC58D0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A17BE6C181F225100FC58D0 /* iHZNet Tests-Info.plist */,
-				1A17BE6D181F225100FC58D0 /* InfoPlist.strings */,
-				1A17BE72181F225100FC58D0 /* iHZNet Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		1A17BE80181F228700FC58D0 /* iHZNetTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,7 +600,6 @@
 				1ACFEF1F14AA76E90084FAB2 /* Resources */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				1A17BE6A181F225100FC58D0 /* iHZNet Tests */,
 				1A17BE80181F228700FC58D0 /* iHZNetTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -920,14 +896,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1A17BE6D181F225100FC58D0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A17BE6E181F225100FC58D0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		1A17BE83181F228700FC58D0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

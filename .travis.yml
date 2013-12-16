@@ -1,15 +1,7 @@
 language: objective-c
 
 before_install: 
-  #- gem install cocoapods
   - rvm 1.9.3
 
 script :
   - xctool -workspace iHZNet.xcworkspace -scheme iHZNet -sdk iphonesimulator build test -freshInstall -freshSimulator
-
-#xcode_workspace: iHZNet.xcworkspace
-#xcode_scheme: iHZNet
-#xcode_configuration: Debug 
-#xcode_arch: i386 
-#xcode_sdk: iphonesimulator
-#xctool_args: -freshSimulator -freshInstall
