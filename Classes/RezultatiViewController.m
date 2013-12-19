@@ -252,8 +252,6 @@ static NSURLConnection *con = nil;
 /*
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section 
 {
-    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)] autorelease];
-    UIImageView *headerImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellback"]] autorelease];
     
     headerImage.frame = CGRectMake(0, 0, tableView.bounds.size.width, 30);
     

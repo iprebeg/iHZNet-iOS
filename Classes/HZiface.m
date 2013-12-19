@@ -56,8 +56,6 @@ static HZiface *shared = nil;
         shared.odlazniKolodvor = odlazni;
         shared.dolazniKolodvor = dolazni;
         
-        [dolazni release];
-        [odlazni release];
          */
 	}
     

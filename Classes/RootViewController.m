@@ -36,7 +36,6 @@
 			OdredisniViewController *newC = [[OdredisniViewController alloc]
 										   initWithNibName:@"OdredisniView" bundle:nil];
 			self.odredisniController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -53,7 +52,6 @@
 			VrijemeViewController *newC = [[VrijemeViewController alloc]
 										   initWithNibName:@"VrijemeView" bundle:nil];
 			self.vrijemeController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -70,7 +68,6 @@
 			RezultatiViewController *newC = [[RezultatiViewController alloc]
 										   initWithNibName:@"RezultatiView" bundle:nil];
 			self.rezultatiController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -88,7 +85,6 @@
 			VrijemeViewController *newC = [[VrijemeViewController alloc]
 										   initWithNibName:@"VrijemeView" bundle:nil];
 			self.vrijemeController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -114,7 +110,6 @@
 			VrijemeViewController *newC = [[VrijemeViewController alloc]
 										   initWithNibName:@"VrijemeView" bundle:nil];
 			self.vrijemeController = newC;
-			[newC release];
 		}
 		 
 		// change controller
@@ -131,7 +126,6 @@
 			OdredisniViewController *newC = [[OdredisniViewController alloc]
 											 initWithNibName:@"OdredisniView" bundle:nil];
 			self.odredisniController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -150,7 +144,6 @@
 			PolazniViewController *newC = [[PolazniViewController alloc]
 										   initWithNibName:@"PolazniView" bundle:nil];
 			self.polazniController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -170,7 +163,6 @@
 			OdredisniViewController *newC = [[OdredisniViewController alloc]
 											 initWithNibName:@"OdredisniView" bundle:nil];
 			self.odredisniController = newC;
-			[newC release];
 		}
 		
 		// change controller
@@ -209,7 +201,6 @@
 									   initWithNibName:@"PolazniView" bundle:nil];
 	self.polazniController = polazniC;
 	[self.view insertSubview:polazniC.view atIndex:0];
-	[polazniC release];
 	
     [super viewDidLoad];
 }
@@ -250,10 +241,6 @@
 
 
 - (void)dealloc {
-	[polazniController release];	
-	[odredisniController release];
-	[vrijemeController release];	
-	[rezultatiController release];	
     [super dealloc];
 }
 

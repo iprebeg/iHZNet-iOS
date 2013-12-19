@@ -45,7 +45,6 @@ static Indicators *shared = nil;
     
     [activityIndicator startAnimating];
     sharedApplication.networkActivityIndicatorVisible = YES;
-    //[activityIndicator release];
 }
 
 - (void) stop

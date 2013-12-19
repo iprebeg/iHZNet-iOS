@@ -209,10 +209,6 @@ numberOfRowsInSection:(NSInteger)section {
     favorit.nazivOdlazniKolodvor = nazOd;
     
     /* valjda autoreleased
-    [idDo release];
-    [idOd release];
-    [nazDo release];
-    [nazOd release];
      */
     NSError *error;  
     UIAlertView *alert = nil;
