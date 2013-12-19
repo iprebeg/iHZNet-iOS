@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "HZiface.h"
 #import "Appirater.h"
-#import "iHZNetAppDelegate.h"
+#import "AppDelegate.h"
 #import "Favorit.h"
 
 static BOOL backendLoaded = NO;
@@ -311,7 +311,7 @@ numberOfRowsInSection:(NSInteger)section {
     izbornikTable.opaque = NO;
     izbornikTable.backgroundView = nil;
     
-    iHZNetAppDelegate *appDelegate = (iHZNetAppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;    
     
     ////

@@ -8,7 +8,7 @@
 
 #import "OdlazniViewController.h"
 #import "HZiface.h"
-#import "iHZNetAppDelegate.h"
+#import "AppDelegate.h"
 #import "Indicators.h"
 #import "RezultatiParser.h"
 

@@ -6,13 +6,13 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "iHZNetAppDelegate.h"
+#import "AppDelegate.h"
 #import "Appirater.h"
 #import "MainViewController.h"
 
 #import <sqlite3.h>
 
-@implementation iHZNetAppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 @synthesize navController;

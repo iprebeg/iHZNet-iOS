@@ -8,7 +8,7 @@
 
 #import "FavoritiViewController.h"
 #import "Favorit.h"
-#import "iHZNetAppDelegate.h"
+#import "AppDelegate.h"
 #import "HZiface.h"
 
 @implementation FavoritiViewController
@@ -191,7 +191,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                                    action:@selector(toggleEdit:)];
     self.navigationItem.rightBarButtonItem = editButton;
     
-    iHZNetAppDelegate *appDelegate = (iHZNetAppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
     
     

@@ -1,5 +1,5 @@
 //
-//  iHZNetAppDelegate.h
+//  AppDelegate.h
 //  iHZNet
 //
 //  Created by Ivor Prebeg on 3/6/11.
@@ -11,7 +11,7 @@
 
 @class RootViewController;
 
-@interface iHZNetAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
 	UINavigationController *navController;
 	UIWindow *window;
     

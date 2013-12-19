@@ -16,12 +16,12 @@
 		1A1DC95F14ABCC70005C23B6 /* cellback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1DC95D14ABCC70005C23B6 /* cellback@2x.png */; };
 		1A3043D81863A8AC0093E1C6 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3043D61863A8AC0093E1C6 /* Storyboard_iPhone.storyboard */; };
 		1A77FBDF134A530B00E52C04 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A77FBDE134A530B00E52C04 /* QuartzCore.framework */; };
-		1A866E1B1863394B00821AA1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DE91863394B00821AA1 /* DataModel.xcdatamodeld */; };
+		1A866E1B1863394B00821AA1 /* iHZNet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DE91863394B00821AA1 /* iHZNet.xcdatamodeld */; };
 		1A866E1C1863394B00821AA1 /* DolazniViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DEC1863394B00821AA1 /* DolazniViewController.m */; };
 		1A866E1D1863394B00821AA1 /* Favorit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DEE1863394B00821AA1 /* Favorit.m */; };
 		1A866E1E1863394B00821AA1 /* FavoritiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DF01863394B00821AA1 /* FavoritiViewController.m */; };
 		1A866E1F1863394B00821AA1 /* HZiface.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DF21863394B00821AA1 /* HZiface.m */; };
-		1A866E201863394B00821AA1 /* iHZNetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DF41863394B00821AA1 /* iHZNetAppDelegate.m */; };
+		1A866E201863394B00821AA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DF41863394B00821AA1 /* AppDelegate.m */; };
 		1A866E211863394B00821AA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A866DF51863394B00821AA1 /* Images.xcassets */; };
 		1A866E221863394B00821AA1 /* Indicators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DF71863394B00821AA1 /* Indicators.m */; };
 		1A866E231863394B00821AA1 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DF91863394B00821AA1 /* InfoViewController.m */; };
@@ -144,7 +144,7 @@
 		1A3043D71863A8AC0093E1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1A77FBDE134A530B00E52C04 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1A7DF49D135CB09B00D0F8C6 /* iHZNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHZNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A866DEA1863394B00821AA1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		1A866DEA1863394B00821AA1 /* iHZNet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iHZNet.xcdatamodel; sourceTree = "<group>"; };
 		1A866DEB1863394B00821AA1 /* DolazniViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DolazniViewController.h; sourceTree = "<group>"; };
 		1A866DEC1863394B00821AA1 /* DolazniViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DolazniViewController.m; sourceTree = "<group>"; };
 		1A866DED1863394B00821AA1 /* Favorit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorit.h; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		1A866DF01863394B00821AA1 /* FavoritiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritiViewController.m; sourceTree = "<group>"; };
 		1A866DF11863394B00821AA1 /* HZiface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZiface.h; sourceTree = "<group>"; };
 		1A866DF21863394B00821AA1 /* HZiface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZiface.m; sourceTree = "<group>"; };
-		1A866DF31863394B00821AA1 /* iHZNetAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHZNetAppDelegate.h; sourceTree = "<group>"; };
-		1A866DF41863394B00821AA1 /* iHZNetAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHZNetAppDelegate.m; sourceTree = "<group>"; };
+		1A866DF31863394B00821AA1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A866DF41863394B00821AA1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1A866DF51863394B00821AA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A866DF61863394B00821AA1 /* Indicators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indicators.h; sourceTree = "<group>"; };
 		1A866DF71863394B00821AA1 /* Indicators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Indicators.m; sourceTree = "<group>"; };
@@ -347,10 +347,10 @@
 				1A866E361863399900821AA1 /* Service */,
 				1A866E351863396F00821AA1 /* Controller */,
 				1A866E37186339BC00821AA1 /* Model */,
-				1A866DF31863394B00821AA1 /* iHZNetAppDelegate.h */,
-				1A866DF41863394B00821AA1 /* iHZNetAppDelegate.m */,
+				1A866DF31863394B00821AA1 /* AppDelegate.h */,
+				1A866DF41863394B00821AA1 /* AppDelegate.m */,
 				1A866DF51863394B00821AA1 /* Images.xcassets */,
-				1A866DE91863394B00821AA1 /* DataModel.xcdatamodeld */,
+				1A866DE91863394B00821AA1 /* iHZNet.xcdatamodeld */,
 			);
 			path = iHZNet;
 			sourceTree = "<group>";
@@ -839,7 +839,7 @@
 				1A866E341863394B00821AA1 /* VrijemeViewController.m in Sources */,
 				1A866E221863394B00821AA1 /* Indicators.m in Sources */,
 				1A866E251863394B00821AA1 /* KolodvorViewController.m in Sources */,
-				1A866E1B1863394B00821AA1 /* DataModel.xcdatamodeld in Sources */,
+				1A866E1B1863394B00821AA1 /* iHZNet.xcdatamodeld in Sources */,
 				1A866E2D1863394B00821AA1 /* Prolaziste.m in Sources */,
 				1A866E241863394B00821AA1 /* Kolodvor.m in Sources */,
 				1A866E311863394B00821AA1 /* RezultatiViewController.m in Sources */,
@@ -848,7 +848,7 @@
 				1A866E2A1863394B00821AA1 /* MainViewController.m in Sources */,
 				1A866E1C1863394B00821AA1 /* DolazniViewController.m in Sources */,
 				1A866E331863394B00821AA1 /* Stajaliste.m in Sources */,
-				1A866E201863394B00821AA1 /* iHZNetAppDelegate.m in Sources */,
+				1A866E201863394B00821AA1 /* AppDelegate.m in Sources */,
 				1AB4C24818634BC70020EDD3 /* main.m in Sources */,
 				1A866E1D1863394B00821AA1 /* Favorit.m in Sources */,
 				1A866E261863394B00821AA1 /* Linija.m in Sources */,
@@ -1115,13 +1115,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1A866DE91863394B00821AA1 /* DataModel.xcdatamodeld */ = {
+		1A866DE91863394B00821AA1 /* iHZNet.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1A866DEA1863394B00821AA1 /* DataModel.xcdatamodel */,
+				1A866DEA1863394B00821AA1 /* iHZNet.xcdatamodel */,
 			);
-			currentVersion = 1A866DEA1863394B00821AA1 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
+			currentVersion = 1A866DEA1863394B00821AA1 /* iHZNet.xcdatamodel */;
+			path = iHZNet.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
