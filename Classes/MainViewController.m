@@ -50,9 +50,9 @@ numberOfRowsInSection:(NSInteger)section {
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc]
+		cell = [[UITableViewCell alloc]
 				 initWithStyle:UITableViewCellStyleValue1
-				 reuseIdentifier:CellIdentifier] autorelease];
+				 reuseIdentifier:CellIdentifier];
 	}
 	
     HZiface *iface = [HZiface sharedHZiface];
@@ -75,7 +75,6 @@ numberOfRowsInSection:(NSInteger)section {
         [df setTimeStyle:NSDateFormatterNoStyle];
         [df setDateFormat:(NSString*) @"dd.MM.YYYY."];
         detailsForThisRow = [df stringFromDate:iface.vrijeme];	
-        [df release];
     }
         
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -142,7 +141,6 @@ numberOfRowsInSection:(NSInteger)section {
 {   
     if (rezultatiController != nil)
     {
-        [rezultatiController release];
         rezultatiController = nil;
     }
     
@@ -179,7 +177,6 @@ numberOfRowsInSection:(NSInteger)section {
     
     as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [as showInView:self.view];
-    [as release];
 }
 
 -(void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -235,7 +232,6 @@ numberOfRowsInSection:(NSInteger)section {
     }
     
     [alert show];
-    [alert release];
 }  
 
 -(IBAction)favoriteButtonPressed:(id)sender
@@ -279,16 +275,6 @@ numberOfRowsInSection:(NSInteger)section {
     return self;
 }
 
-- (void)dealloc
-{
-    [polazniController release];
-    [odredisniController release];
-    [vrijemeController release];
-    [rezultatiController release];
-    [favoritiController release];
-    [infoController release];
-    [super dealloc];
-}
 
 - (void)updateFavorites
 {
@@ -303,7 +289,6 @@ numberOfRowsInSection:(NSInteger)section {
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:NO];  
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];  
     [request setSortDescriptors:sortDescriptors];  
-    [sortDescriptor release];   
     
     // Fetch the records and handle an error  
     NSError *error;  
@@ -339,8 +324,6 @@ numberOfRowsInSection:(NSInteger)section {
     
     [managedObjectContext save:nil];
     
-    [mutableFetchResults release];  
-    [request release];  
 }
 
 - (void)viewDidLoad
@@ -359,7 +342,7 @@ numberOfRowsInSection:(NSInteger)section {
     
     if (![HZiface isLoaded]) {
     
-        loadingView = [[[UIAlertView alloc] initWithTitle:@"Učitavanje kolodvora\nMolimo pričekajte..." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil] autorelease];
+        loadingView = [[UIAlertView alloc] initWithTitle:@"Učitavanje kolodvora\nMolimo pričekajte..." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
         [loadingView show];
 
         
@@ -369,7 +352,6 @@ numberOfRowsInSection:(NSInteger)section {
         indicator.center = CGPointMake(loadingView.bounds.size.width / 2, loadingView.bounds.size.height - 50);
         [indicator startAnimating];
         [loadingView addSubview:indicator];
-        [indicator release];    
         ////
     
         

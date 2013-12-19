@@ -33,20 +33,20 @@
 
 }
 
-@property (retain, nonatomic) Putovanje *currentPutovanje;
-@property (retain, nonatomic) Linija *currentLinija;
-@property (retain, nonatomic) Kolodvor *currentKolodvor;
-@property (retain, nonatomic) Stajaliste *currentStajaliste;
-@property (retain, nonatomic) Prolaziste *currentProlaziste;
+@property (strong, nonatomic) Putovanje *currentPutovanje;
+@property (strong, nonatomic) Linija *currentLinija;
+@property (strong, nonatomic) Kolodvor *currentKolodvor;
+@property (strong, nonatomic) Stajaliste *currentStajaliste;
+@property (strong, nonatomic) Prolaziste *currentProlaziste;
 
-@property (retain, nonatomic) NSMutableArray *currentStajalista;
-@property (retain, nonatomic) NSMutableArray *currentLinije;
-@property (retain, nonatomic) NSMutableArray *currentOznake;
+@property (strong, nonatomic) NSMutableArray *currentStajalista;
+@property (strong, nonatomic) NSMutableArray *currentLinije;
+@property (strong, nonatomic) NSMutableArray *currentOznake;
 
-@property (retain, nonatomic) NSMutableArray *kolodvori;
-@property (retain, nonatomic) NSMutableArray *rezultati;
+@property (strong, nonatomic) NSMutableArray *kolodvori;
+@property (strong, nonatomic) NSMutableArray *rezultati;
 
-@property (retain, nonatomic) NSString *currentProperty;
+@property (strong, nonatomic) NSString *currentProperty;
 
 - (BOOL)parseXML:(NSData *)xml;
 - (NSMutableArray*)getRezultati;

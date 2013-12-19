@@ -23,11 +23,11 @@
     Linija *linija;
 }
 
-@property (retain, nonatomic) IBOutlet UITableView *stajalistaTable;
-@property (retain, nonatomic) IBOutlet UITableViewCell *tvCell;
-@property (retain, nonatomic) NSArray *stajalista;
-@property (retain, nonatomic) UIButton *liveInfoButton;
-@property (retain, nonatomic) Linija *linija;
+@property (strong, nonatomic) IBOutlet UITableView *stajalistaTable;
+@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
+@property (strong, nonatomic) NSArray *stajalista;
+@property (strong, nonatomic) UIButton *liveInfoButton;
+@property (strong, nonatomic) Linija *linija;
 
 
 - (id)initWithLinija:(Linija*)linija;

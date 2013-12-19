@@ -22,12 +22,12 @@
 }
 
 @property (nonatomic) BOOL loaded;
-@property (nonatomic, retain) NSMutableData *receivedData;
-@property (nonatomic, retain) NSArray *kolodvori;
-@property (nonatomic, retain) Kolodvor *odlazniKolodvor;
-@property (nonatomic, retain) Kolodvor *dolazniKolodvor;
-@property (nonatomic, retain) NSDate *vrijeme;
-@property (nonatomic, retain) NSString *dv;
+@property (nonatomic, strong) NSMutableData *receivedData;
+@property (nonatomic, strong) NSArray *kolodvori;
+@property (nonatomic, strong) Kolodvor *odlazniKolodvor;
+@property (nonatomic, strong) Kolodvor *dolazniKolodvor;
+@property (nonatomic, strong) NSDate *vrijeme;
+@property (nonatomic, strong) NSString *dv;
 
 - (void)loadKolodvori;
 + (HZiface *) sharedHZiface;

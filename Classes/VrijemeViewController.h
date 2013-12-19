@@ -15,7 +15,7 @@
 	UIDatePicker *datePicker;
 }
 
-@property (retain, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 
 @end

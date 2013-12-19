@@ -13,10 +13,10 @@
 @interface Favorit : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * idOdlazniKolodvor;
-@property (nonatomic, retain) NSNumber * idDolazniKolodvor;
-@property (nonatomic, retain) NSString * nazivOdlazniKolodvor;
-@property (nonatomic, retain) NSString * nazivDolazniKolodvor;
+@property (nonatomic, strong) NSNumber * id;
+@property (nonatomic, strong) NSNumber * idOdlazniKolodvor;
+@property (nonatomic, strong) NSNumber * idDolazniKolodvor;
+@property (nonatomic, strong) NSString * nazivOdlazniKolodvor;
+@property (nonatomic, strong) NSString * nazivDolazniKolodvor;
 
 @end

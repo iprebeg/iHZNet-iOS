@@ -40,7 +40,6 @@ static NSURLConnection *con = nil;
     
     NSString *vrijeme = [df stringFromDate:iface.vrijeme];	
     
-    [df release];
     
     
     NSString *req = [NSString stringWithFormat:kURLString,iface.odlazniKolodvor.idKolodvora,iface.dolazniKolodvor.idKolodvora,vrijeme, iface.dv];	
@@ -57,7 +56,7 @@ static NSURLConnection *con = nil;
 	con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
 	if (con) {
-		receivedData = [[NSMutableData data] retain];
+		receivedData = [NSMutableData data];
 		//NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
@@ -79,8 +78,6 @@ static NSURLConnection *con = nil;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	[connection release];	
-	[receivedData release];
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
@@ -88,7 +85,6 @@ static NSURLConnection *con = nil;
     [[Indicators sharedIndicators] stop];
     
     [alert show];
-    [alert release];	
     
     [[self rezultati] removeAllObjects];
     [[self rezultatiTable] reloadData];
@@ -113,7 +109,6 @@ static NSURLConnection *con = nil;
         [[Indicators sharedIndicators] stop];
         
         [alert show];
-        [alert release];
         
         [[self rezultati] removeAllObjects];
         [[self rezultatiTable] reloadData];
@@ -140,7 +135,6 @@ static NSURLConnection *con = nil;
         
         as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
         [as showInView:self.view];
-        [as release];
         
         
         
@@ -154,7 +148,6 @@ static NSURLConnection *con = nil;
     [df setTimeStyle:NSDateFormatterNoStyle];
     [df setDateFormat:(NSString*) @"dd.MM.YYYY."];
     NSString *datum = [df stringFromDate:iface.vrijeme];	
-    [df release];
 
     UILabel *datumLabel = (UILabel *)[self.view viewWithTag:kDatumTag];
     datumLabel.text = datum;
@@ -424,7 +417,6 @@ numberOfRowsInSection:(NSInteger)section {
         for (i = i; i < [oznakaArray count]; i++) 
             [[oznakaArray objectAtIndex:i] setImage:nil];        
     
-        [oznakaArray release];   
     }
     else
     {   
@@ -504,14 +496,6 @@ numberOfRowsInSection:(NSInteger)section {
 }
 
 
-- (void)dealloc {
-	[rezultati release];
-    [rezultatiTable release];
-    [receivedData release];
-    [izravniSegmented release];
-    [tvCell release];
-    [super dealloc];
-}
 
 
 @end

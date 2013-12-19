@@ -15,8 +15,8 @@
     NSString *vrijemeDolaskaStajaliste;
 }
 
-@property (nonatomic, retain) NSString *nazivStajalista;
-@property (nonatomic, retain) NSString *vrijemeOdlaskaStajaliste;
-@property (nonatomic, retain) NSString *vrijemeDolaskaStajaliste;
+@property (nonatomic, strong) NSString *nazivStajalista;
+@property (nonatomic, strong) NSString *vrijemeOdlaskaStajaliste;
+@property (nonatomic, strong) NSString *vrijemeDolaskaStajaliste;
 
 @end

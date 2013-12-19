@@ -53,10 +53,10 @@
     UITableViewCell *tvCell;
 }
 
-@property (retain, nonatomic) NSMutableArray *rezultati;
-@property (retain, nonatomic) IBOutlet UITableView *rezultatiTable;
+@property (strong, nonatomic) NSMutableArray *rezultati;
+@property (strong, nonatomic) IBOutlet UITableView *rezultatiTable;
 @property (copy, nonatomic) NSMutableData *receivedData;
-@property (retain, nonatomic) UISegmentedControl *izravniSegmented;
-@property (retain, nonatomic) IBOutlet UITableViewCell *tvCell;
+@property (strong, nonatomic) UISegmentedControl *izravniSegmented;
+@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
 
 @end

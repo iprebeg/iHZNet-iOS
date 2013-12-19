@@ -36,7 +36,7 @@
     if (managedObjectModel != nil) {
         return managedObjectModel;
     }
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];
+    managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     
     return managedObjectModel;
 }
@@ -126,15 +126,6 @@
 }
 
 
-- (void)dealloc {
-    [window release];
-	[navController release];
-    
-    [managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];    
-    [super dealloc];
-}
 
 
 @end

@@ -15,8 +15,8 @@
     UIApplication *sharedApplication;
 }
 
-@property (retain, nonatomic) UIActivityIndicatorView *activityIndicator;
-@property (retain, nonatomic) UIApplication *sharedApplication;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) UIApplication *sharedApplication;
 
 + (Indicators *) sharedIndicators;
 - (void) start:(UIViewController*)controller;

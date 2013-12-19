@@ -42,7 +42,6 @@
 	if ([self kolodvoriFiltered] == nil) {
 		NSMutableArray *array = [[NSMutableArray alloc]init];
 		[self setKolodvoriFiltered:array];
-		[array release];
 	}
 	
 	[[self kolodvoriFiltered] removeAllObjects];
@@ -73,13 +72,6 @@
     [super viewDidUnload];
 }
 
-- (void)dealloc {
-	[kolodvoriTable release];
-    [kolodvori release];	
-	[kolodvoriFiltered release];
-    [savedSearchTerm release];
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark Table Vuew Data Source Methods
@@ -113,9 +105,9 @@ numberOfRowsInSection:(NSInteger)section {
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc]
+		cell = [[UITableViewCell alloc]
 				 initWithStyle:UITableViewCellStyleDefault
-				 reuseIdentifier:CellIdentifier] autorelease];
+				 reuseIdentifier:CellIdentifier];
 	}
 	
 	[[cell textLabel] setText:contentForThisRow];

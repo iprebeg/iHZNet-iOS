@@ -16,7 +16,7 @@
 }
 
 @property (nonatomic) NSUInteger idKolodvora;
-@property (nonatomic, retain) NSString *naziv;
+@property (nonatomic, strong) NSString *naziv;
 
 
 @end

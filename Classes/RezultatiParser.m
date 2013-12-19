@@ -64,7 +64,6 @@ static UIViewController *controller = nil;
                               initWithTitle:@"UPOZORENJE!" message:@"Pogreška pri procesiranju zahtjeva na poslužitelju!" delegate:controller cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
         
         [alert show];
-        [alert release];	
         
         return false;
     }
@@ -74,7 +73,6 @@ static UIViewController *controller = nil;
     NSLog(xmlRes);
 #endif
     
-    [xmlRes release];
 
     
     
@@ -82,7 +80,6 @@ static UIViewController *controller = nil;
     [xmlParser setDelegate:self];
     [xmlParser parse];
     
-    [xmlParser release];
     
     return TRUE;
 }
@@ -239,28 +236,24 @@ static UIViewController *controller = nil;
     
     if ( [elementName isEqualToString:@"prolaziste"] ) {
         [prolazista addObject:currentProlaziste];
-        [currentProlaziste release];
         return;
     }
     
     if ( [elementName isEqualToString:@"nazivProlazista"]) 
     {
         [currentProlaziste setNaziv:currentProperty];
-        [currentProperty release];
         return;
     }
 
     if ( [elementName isEqualToString:@"vrijemeDolaskaProlaziste"]) 
     {
         [currentProlaziste setVrijemeDolaska:currentProperty];
-        [currentProperty release];
         return;
     }
 
     if ( [elementName isEqualToString:@"vrijemeOdlaskaProlaziste"]) 
     {
         [currentProlaziste setVrijemeOdlaska:currentProperty];
-        [currentProperty release];
         return;
     }
     
@@ -268,7 +261,6 @@ static UIViewController *controller = nil;
     if ( [elementName isEqualToString:@"kasnjenjeOdlaska"]) 
     {
         [currentProlaziste setKasnjenjeOdlaska:currentProperty];
-        [currentProperty release];
         return;
     }
     
@@ -276,7 +268,6 @@ static UIViewController *controller = nil;
     if ( [elementName isEqualToString:@"kasnjenjeDolaska"]) 
     {
         [currentProlaziste setKasnjenjeDolaska:currentProperty];
-        [currentProperty release];
         return;
     }
     
@@ -289,21 +280,18 @@ static UIViewController *controller = nil;
     
     if ( [elementName isEqualToString:@"kolodvor"] ) {
         [kolodvori addObject: currentKolodvor];
-        [currentKolodvor release];
         return;
     }
     
     if ( [elementName isEqualToString:@"idKolodvora"]) 
     {
         [currentKolodvor setIdKolodvora:[currentProperty integerValue]];
-        [currentProperty release];
         return;
     }
 
     if ([elementName isEqualToString:@"nazivKolodvora"]) 
     {
         [currentKolodvor setNaziv:currentProperty];
-        [currentProperty release];
         return;
     }
     
@@ -317,7 +305,6 @@ static UIViewController *controller = nil;
     
     if ( [elementName isEqualToString:@"putovanje"] ) {
         [rezultati addObject:currentPutovanje];
-        [currentPutovanje release];
         return;
     }
     
@@ -327,37 +314,31 @@ static UIViewController *controller = nil;
         else
             [currentPutovanje setIzravno:true];
         
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"brojPresjedanja"] ) {
         [currentPutovanje setBrojPresjedanja:[currentProperty integerValue]];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"ukupnoTrajanjeVoznje"] ) {
         [currentPutovanje setTrajanjeVoznje:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"ukupnoTrajanjeCekanja"] ) {
         [currentPutovanje setTrajanjeCekanja:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"ukupnoTrajanjePutovanja"] ) {
         [currentPutovanje setTrajanjePutovanja:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"linije"] ) {
         [currentPutovanje setLinije:currentLinije];
-        [currentLinije release];
         return;
     }
     
@@ -365,73 +346,61 @@ static UIViewController *controller = nil;
     
     if ( [elementName isEqualToString:@"linija"] ) {
         [currentLinije addObject:currentLinija];
-        [currentLinija release];
         return;
     }
     
     if ( [elementName isEqualToString:@"listaStajalista"] ) {
         [currentLinija setStajalista:currentStajalista];
-        [currentStajalista release];
         return;
     }
     
     if ( [elementName isEqualToString:@"stajaliste"] ) {
         [currentStajalista addObject:currentStajaliste];
-        [currentStajaliste release];
         return;
     }
     
     if ( [elementName isEqualToString:@"nazivStajalista"] ) {
         [currentStajaliste setNazivStajalista:currentProperty];
-        [currentProperty release];
         return;
     }
 
     if ( [elementName isEqualToString:@"vrijemeDolaskaStajaliste"] ) {
         [currentStajaliste setVrijemeDolaskaStajaliste:currentProperty];
-        [currentProperty release];
         return;
     }
 
     if ( [elementName isEqualToString:@"vrijemeOdlaskaStajaliste"] ) {
         [currentStajaliste setVrijemeOdlaskaStajaliste:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"nazivLinije"] ) {
         [currentLinija setNazivLinije:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"odlazniKolodvor"] ) {
         [currentLinija setOdlazniKolodvor:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"dolazniKolodvor"] ) {
         [currentLinija setDolazniKolodvor:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"vrijemeOdlaska"] ) {
         [currentLinija setVrijemeOdlaska:currentProperty];
-        [currentProperty release];
         return;
     }
     
     if ( [elementName isEqualToString:@"vrijemeDolaska"] ) {
         [currentLinija setVrijemeDolaska:currentProperty];
-        [currentProperty release];
         return;
     }
 
     if ( [elementName isEqualToString:@"trajanjeVoznje"] ) {
         [currentLinija setTrajanjeVoznje:currentProperty];
-        [currentProperty release];
         return;
     }
 
@@ -440,13 +409,11 @@ static UIViewController *controller = nil;
     
     if ( [elementName isEqualToString:@"oznake"] ) {
         [currentLinija setOznake:currentOznake];
-        [currentOznake release];
         return;
     }
     
     if ( [elementName isEqualToString:@"oznaka"] ) {        
         [currentOznake addObject:currentProperty];
-        [currentProperty release];
         return;
     }    
 }
@@ -471,7 +438,6 @@ static UIViewController *controller = nil;
                           initWithTitle:@"UPOZORENJE!" message:@"Pogreška pri procesiranju odgovora!" delegate:controller cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
     
     [alert show];
-    [alert release];	    
     
 }
 

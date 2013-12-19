@@ -39,18 +39,18 @@
     NSManagedObjectContext *managedObjectContext;
 }
 
-@property (retain, nonatomic) IBOutlet UILabel *infoLabel;
-@property (retain, nonatomic) IBOutlet UIToolbar *toolbar;
-@property (retain, nonatomic) IBOutlet UIButton *searchButton;
-@property (retain, nonatomic) IBOutlet UITableView *izbornikTable;
-@property (retain, nonatomic) OdlazniViewController *polazniController;
-@property (retain, nonatomic) DolazniViewController *odredisniController;
-@property (retain, nonatomic) VrijemeViewController *vrijemeController;
-@property (retain, nonatomic) RezultatiViewController *rezultatiController;
-@property (retain, nonatomic) FavoritiViewController *favoritiController;
-@property (retain, nonatomic) InfoViewController *infoController;
+@property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
+@property (strong, nonatomic) IBOutlet UITableView *izbornikTable;
+@property (strong, nonatomic) OdlazniViewController *polazniController;
+@property (strong, nonatomic) DolazniViewController *odredisniController;
+@property (strong, nonatomic) VrijemeViewController *vrijemeController;
+@property (strong, nonatomic) RezultatiViewController *rezultatiController;
+@property (strong, nonatomic) FavoritiViewController *favoritiController;
+@property (strong, nonatomic) InfoViewController *infoController;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;  
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;  
 
 
 - (IBAction)searchButtonPressed:(id)sender;

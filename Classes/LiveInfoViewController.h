@@ -25,10 +25,10 @@
     Linija *linija;
 }
 
-@property (retain, nonatomic) Linija *linija;
-@property (retain, nonatomic) IBOutlet UITableView *prolazistaTable;
-@property (retain, nonatomic) IBOutlet UITableViewCell *tvCell;
-@property (retain, nonatomic) NSMutableArray *prolazista;
+@property (strong, nonatomic) Linija *linija;
+@property (strong, nonatomic) IBOutlet UITableView *prolazistaTable;
+@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
+@property (strong, nonatomic) NSMutableArray *prolazista;
 
 - (id)initWithLinija:(Linija*)linija;
 

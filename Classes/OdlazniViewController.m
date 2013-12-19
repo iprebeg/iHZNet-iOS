@@ -46,7 +46,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:@"UPOZORENJE!" message:@"Odabrali ste isti kolodvor kao polazni i odredišni!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
         [alert show];
-        [alert release];
         return;
     }
 

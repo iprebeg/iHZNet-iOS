@@ -18,8 +18,8 @@
     UIButton *reportButton;
 }
 
-@property (nonatomic, retain) IBOutlet UIButton *rateButton;
-@property (nonatomic, retain) IBOutlet UIButton *reportButton;
+@property (nonatomic, strong) IBOutlet UIButton *rateButton;
+@property (nonatomic, strong) IBOutlet UIButton *reportButton;
 
 - (IBAction)rateButtonPressed:(id)sender;
 - (IBAction)reportButtonPressed:(id)sender;

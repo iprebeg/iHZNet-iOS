@@ -51,7 +51,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:NO];  
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];  
     [request setSortDescriptors:sortDescriptors];  
-    [sortDescriptor release];   
     
     // Fetch the records and handle an error  
     NSError *error;  
@@ -65,8 +64,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // Save our fetched data to an array  
     [self setFavoriti: mutableFetchResults];  
-    [mutableFetchResults release];  
-    [request release];  
     
     [favoritiTable reloadData];
 }   
@@ -123,7 +120,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                  initWithTitle:@"UPOZORENJE!" message:@"Putovanje nije obrisano!" delegate:nil cancelButtonTitle:@"OK!" otherButtonTitles:nil];	
         
         [alert show];
-        [alert release];
         return;
         
     }  else {
@@ -131,7 +127,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                  initWithTitle:@"Putovanje obrisano!" message:@"Putovanje uklonjeno iz liste favorita!" delegate:nil cancelButtonTitle:@"OK!" otherButtonTitles:nil];
         
         [alert show];
-        [alert release];
     }
     
     
@@ -204,7 +199,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                                    target:self
                                    action:@selector(toggleEdit:)];
     self.navigationItem.rightBarButtonItem = editButton;
-    [editButton release];
     
     iHZNetAppDelegate *appDelegate = (iHZNetAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;

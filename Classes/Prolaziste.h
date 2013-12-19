@@ -17,11 +17,11 @@
     NSString *kasnjenjeOdlaska;
 }
 
-@property (nonatomic, retain) NSString *naziv;
-@property (nonatomic, retain) NSString *vrijemeDolaska;
-@property (nonatomic, retain) NSString *vrijemeOdlaska;
-@property (nonatomic, retain) NSString *kasnjenjeDolaska;
-@property (nonatomic, retain) NSString *kasnjenjeOdlaska;
+@property (nonatomic, strong) NSString *naziv;
+@property (nonatomic, strong) NSString *vrijemeDolaska;
+@property (nonatomic, strong) NSString *vrijemeOdlaska;
+@property (nonatomic, strong) NSString *kasnjenjeDolaska;
+@property (nonatomic, strong) NSString *kasnjenjeOdlaska;
 
 
 

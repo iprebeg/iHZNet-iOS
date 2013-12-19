@@ -22,11 +22,11 @@
     NSManagedObjectContext *managedObjectContext;
 }
 
-@property (retain, nonatomic) IBOutlet UITableView *favoritiTable;
-@property (retain, nonatomic) IBOutlet UITableViewCell *tvCell;
-@property (retain, nonatomic) NSMutableArray *favoriti;
+@property (strong, nonatomic) IBOutlet UITableView *favoritiTable;
+@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
+@property (strong, nonatomic) NSMutableArray *favoriti;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;  
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;  
 
 - (void) fetchRecords;  
 - (IBAction)toggleEdit:(id)sender;

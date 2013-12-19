@@ -109,7 +109,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
 	if (con) {
-		receivedData = [[NSMutableData data] retain];
+		receivedData = [NSMutableData data];
 		//NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
@@ -131,8 +131,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	[connection release];	
-	[receivedData release];
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
@@ -140,7 +138,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     [[Indicators sharedIndicators] stop];
     
     [alert show];
-    [alert release];	
     
     [[self prolazista] removeAllObjects];
     [[self prolazistaTable] reloadData];
@@ -164,7 +161,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         [[Indicators sharedIndicators] stop];
         
         [alert show];
-        [alert release];
         
         [[self prolazista] removeAllObjects];
         [[self prolazistaTable] reloadData];
@@ -185,7 +181,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         
         as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
         [as showInView:self.view];
-        [as release];
         
         
         

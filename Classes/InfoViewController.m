@@ -31,7 +31,6 @@
     if (controller)
         [self presentViewController:controller animated:YES completion:nil];
     
-    [controller release];
 }
 
 
@@ -50,7 +49,6 @@
     
     as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [as showInView:self.view];
-    [as release];
 }
 
 -(void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex

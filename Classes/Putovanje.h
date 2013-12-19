@@ -20,10 +20,10 @@
     NSArray *linije;
 
 }
-@property (retain, nonatomic) NSArray *linije;
-@property (retain, nonatomic) NSString *trajanjeCekanja;
-@property (retain, nonatomic) NSString *trajanjeVoznje;
-@property (retain, nonatomic) NSString *trajanjePutovanja;
+@property (strong, nonatomic) NSArray *linije;
+@property (strong, nonatomic) NSString *trajanjeCekanja;
+@property (strong, nonatomic) NSString *trajanjeVoznje;
+@property (strong, nonatomic) NSString *trajanjePutovanja;
 @property (nonatomic) NSUInteger brojPresjedanja;
 @property (nonatomic) BOOL izravno;
 @property (nonatomic) BOOL expanded;

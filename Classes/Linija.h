@@ -20,13 +20,13 @@
     NSArray  *stajalista;
 }
 
-@property (nonatomic, retain) NSString *odlazniKolodvor;
-@property (nonatomic, retain) NSString *dolazniKolodvor;
-@property (nonatomic, retain) NSString *vrijemeOdlaska;
-@property (nonatomic, retain) NSString *vrijemeDolaska;
-@property (nonatomic, retain) NSString *nazivLinije;
-@property (nonatomic, retain) NSString *trajanjeVoznje;
-@property (nonatomic, retain) NSArray  *oznake;
-@property (nonatomic, retain) NSArray  *stajalista;
+@property (nonatomic, strong) NSString *odlazniKolodvor;
+@property (nonatomic, strong) NSString *dolazniKolodvor;
+@property (nonatomic, strong) NSString *vrijemeOdlaska;
+@property (nonatomic, strong) NSString *vrijemeDolaska;
+@property (nonatomic, strong) NSString *nazivLinije;
+@property (nonatomic, strong) NSString *trajanjeVoznje;
+@property (nonatomic, strong) NSArray  *oznake;
+@property (nonatomic, strong) NSArray  *stajalista;
 
 @end

@@ -80,7 +80,7 @@ static HZiface *shared = nil;
 	NSURLConnection *con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
 	if (con) {
-		receivedData = [[NSMutableData data] retain];
+		receivedData = [NSMutableData data];
 		NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
@@ -101,15 +101,12 @@ static HZiface *shared = nil;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {	
-	[connection release];	
-	[receivedData release];
     
     [[Indicators sharedIndicators] stop];
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"Pokušajte ponovno!" otherButtonTitles:nil];
     [alert show];
-    [alert release];	
 	
     NSLog(@"Connection failed! Error - %@ %@",
 		  [error localizedDescription],

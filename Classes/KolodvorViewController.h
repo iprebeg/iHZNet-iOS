@@ -21,10 +21,10 @@
 }
 	
 	
-@property (retain, nonatomic) IBOutlet UITableView *kolodvoriTable;
-@property (retain, nonatomic) NSArray *kolodvori;
-@property (retain, nonatomic) NSMutableArray *kolodvoriFiltered;
-@property (retain, nonatomic) NSString *savedSearchTerm;
+@property (strong, nonatomic) IBOutlet UITableView *kolodvoriTable;
+@property (strong, nonatomic) NSArray *kolodvori;
+@property (strong, nonatomic) NSMutableArray *kolodvoriFiltered;
+@property (strong, nonatomic) NSString *savedSearchTerm;
 	
 -(void)handleSearchForTerm:(NSString*)searchTerm;
 	
