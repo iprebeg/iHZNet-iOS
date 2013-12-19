@@ -7,7 +7,6 @@
 //
 
 #import "iHZNetAppDelegate.h"
-#import "RootViewController.h"
 #import "Appirater.h"
 #import "MainViewController.h"
 
