@@ -38,7 +38,7 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
 }
 
 -(void) viewWillDisappear:(BOOL)animated

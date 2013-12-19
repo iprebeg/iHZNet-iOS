@@ -56,7 +56,7 @@ static NSURLConnection *con = nil;
 	con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
 	if (con) {
-		receivedData = [NSMutableData data];
+        receivedData = [NSMutableData data];
 		//NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
@@ -78,6 +78,8 @@ static NSURLConnection *con = nil;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    connection = nil;
+    receivedData = nil;
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
@@ -171,7 +173,7 @@ static NSURLConnection *con = nil;
     rezultati = [[NSMutableArray alloc] init ];
     //rezultatiTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     izravniSegmented = [[UISegmentedControl alloc] initWithItems:[[NSArray alloc] initWithObjects:@"Izravni", @"S presjedanjem" , nil]];
     

@@ -109,7 +109,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
 	if (con) {
-		receivedData = [NSMutableData data];
+        receivedData = [NSMutableData data];
 		//NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
@@ -131,6 +131,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    
+    connection = nil;
+    receivedData = nil;
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	

@@ -70,7 +70,7 @@ static HZiface *shared = nil;
 -(void)loadKolodvori
 {    
     
-    NSString *req = [NSString stringWithString:kURLKolodvori];		
+    NSString *req = [NSString stringWithString:kURLKolodvori];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:req]
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -78,7 +78,7 @@ static HZiface *shared = nil;
 	NSURLConnection *con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
 	if (con) {
-		receivedData = [NSMutableData data];
+        receivedData = [NSMutableData data];
 		NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
@@ -98,7 +98,9 @@ static HZiface *shared = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{	
+{
+    connection = nil;
+    receivedData = nil;
     
     [[Indicators sharedIndicators] stop];
     

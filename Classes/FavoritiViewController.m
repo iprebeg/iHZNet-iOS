@@ -20,6 +20,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
+    NSLog(@"got %d cells", [favoriti count]);
     return [favoriti count];
 }
 
@@ -60,10 +61,12 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         NSLog(@"holy crap, cant get db entry");
         // Handle the error.  
         // This is a serious error and should advise the user to restart the application  
-    }   
+    }
     
     // Save our fetched data to an array  
     [self setFavoriti: mutableFetchResults];  
+    
+    NSLog(@"got %d cells", [favoriti count]);
     
     [favoritiTable reloadData];
 }   
@@ -164,19 +167,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     doKolLabel.text = [favorit nazivDolazniKolodvor];
         
     return cell;
-}       
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.title = @"Favoriti";
-    }
-    return self;
 }
-
 
 #pragma mark - View lifecycle
 
@@ -188,7 +179,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     favoritiTable.backgroundColor = [UIColor clearColor];
     favoritiTable.opaque = NO;
     favoritiTable.backgroundView = nil;

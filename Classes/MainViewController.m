@@ -253,25 +253,6 @@ numberOfRowsInSection:(NSInteger)section {
     [self.navigationController pushViewController:infoController animated:YES];
 }
 
-
-
-
-
-
-#pragma mark -
-#pragma mark Initialization and Exit handling
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-    }
-    return self;
-}
-
-
 - (void)updateFavorites
 {
     // Define our table/entity to use  
@@ -324,7 +305,7 @@ numberOfRowsInSection:(NSInteger)section {
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     izbornikTable.backgroundColor = [UIColor clearColor];
     izbornikTable.opaque = NO;

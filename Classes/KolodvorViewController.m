@@ -96,7 +96,7 @@ numberOfRowsInSection:(NSInteger)section {
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc]
+        cell = [[UITableViewCell alloc]
 				 initWithStyle:UITableViewCellStyleDefault
 				 reuseIdentifier:CellIdentifier];
 	}
