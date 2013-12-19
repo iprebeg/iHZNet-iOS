@@ -14,6 +14,7 @@
 		1A17BE87181F228700FC58D0 /* iHZNetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A17BE86181F228700FC58D0 /* iHZNetTests.m */; };
 		1A1DC95E14ABCC70005C23B6 /* cellback.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1DC95C14ABCC70005C23B6 /* cellback.png */; };
 		1A1DC95F14ABCC70005C23B6 /* cellback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1DC95D14ABCC70005C23B6 /* cellback@2x.png */; };
+		1A3043D81863A8AC0093E1C6 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3043D61863A8AC0093E1C6 /* Storyboard_iPhone.storyboard */; };
 		1A77FBDF134A530B00E52C04 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A77FBDE134A530B00E52C04 /* QuartzCore.framework */; };
 		1A866E1B1863394B00821AA1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DE91863394B00821AA1 /* DataModel.xcdatamodeld */; };
 		1A866E1C1863394B00821AA1 /* DolazniViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866DEC1863394B00821AA1 /* DolazniViewController.m */; };
@@ -43,7 +44,6 @@
 		1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4914AF8BF10001467E /* LiveInfoView.xib */; };
 		1AAE71821406E68D001A2CA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAE71811406E68D001A2CA1 /* CoreData.framework */; };
 		1AB4C24818634BC70020EDD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4C24718634BC70020EDD3 /* main.m */; };
-		1AB4C25218634E270020EDD3 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB4C25118634E270020EDD3 /* Storyboard_iPhone.storyboard */; };
 		1ACFEF7614AA76E90084FAB2 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF2714AA76E90084FAB2 /* blueButton.png */; };
 		1ACFEF7714AA76E90084FAB2 /* darkgreenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF2814AA76E90084FAB2 /* darkgreenButton.png */; };
 		1ACFEF7814AA76E90084FAB2 /* darkgreenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF2914AA76E90084FAB2 /* darkgreenButton@2x.png */; };
@@ -141,6 +141,7 @@
 		1A17BE88181F228700FC58D0 /* iHZNetTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iHZNetTests-Prefix.pch"; sourceTree = "<group>"; };
 		1A1DC95C14ABCC70005C23B6 /* cellback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellback.png; sourceTree = "<group>"; };
 		1A1DC95D14ABCC70005C23B6 /* cellback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellback@2x.png"; sourceTree = "<group>"; };
+		1A3043D71863A8AC0093E1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1A77FBDE134A530B00E52C04 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1A7DF49D135CB09B00D0F8C6 /* iHZNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHZNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A866DEA1863394B00821AA1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -195,7 +196,6 @@
 		1AB4C24518634BAB0020EDD3 /* iHZNet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "iHZNet-Info.plist"; path = "iHZNet/iHZNet-Info.plist"; sourceTree = "<group>"; };
 		1AB4C24718634BC70020EDD3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iHZNet/main.m; sourceTree = "<group>"; };
 		1AB4C24B18634BFE0020EDD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = iHZNet/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1AB4C25118634E270020EDD3 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		1AB4C25318634FA30020EDD3 /* iHZNet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "iHZNet-Prefix.pch"; path = "iHZNet/iHZNet-Prefix.pch"; sourceTree = "<group>"; };
 		1ACFEF2714AA76E90084FAB2 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
 		1ACFEF2814AA76E90084FAB2 /* darkgreenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkgreenButton.png; sourceTree = "<group>"; };
@@ -341,7 +341,7 @@
 		1A866DE81863394B00821AA1 /* iHZNet */ = {
 			isa = PBXGroup;
 			children = (
-				1AB4C25118634E270020EDD3 /* Storyboard_iPhone.storyboard */,
+				1A3043D61863A8AC0093E1C6 /* Storyboard_iPhone.storyboard */,
 				29B97315FDCFA39411CA2CEA /* Supporting Files */,
 				1ACFEF1F14AA76E90084FAB2 /* Resources */,
 				1A866E361863399900821AA1 /* Service */,
@@ -657,6 +657,7 @@
 				French,
 				German,
 				en,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -744,7 +745,6 @@
 				1ACFEFB614AA76E90084FAB2 /* OdlazniView.xib in Resources */,
 				1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */,
 				1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */,
-				1AB4C25218634E270020EDD3 /* Storyboard_iPhone.storyboard in Resources */,
 				1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */,
 				1ACFEFBA14AA76E90084FAB2 /* VrijemeView.xib in Resources */,
 				1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */,
@@ -752,6 +752,7 @@
 				1A1DC95E14ABCC70005C23B6 /* cellback.png in Resources */,
 				1A1DC95F14ABCC70005C23B6 /* cellback@2x.png in Resources */,
 				1AA02B4814AF8AF10001467E /* ProlazisteTableViewCell.xib in Resources */,
+				1A3043D81863A8AC0093E1C6 /* Storyboard_iPhone.storyboard in Resources */,
 				1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,6 +879,14 @@
 				1A17BE84181F228700FC58D0 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1A3043D61863A8AC0093E1C6 /* Storyboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A3043D71863A8AC0093E1C6 /* Base */,
+			);
+			name = Storyboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		1AB4C24A18634BFE0020EDD3 /* InfoPlist.strings */ = {
