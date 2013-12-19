@@ -10,11 +10,6 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>iHZNet57</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>iHZNet114.png</string>
-		<string>iHZNet57.png</string>
-	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.prebeg.ihznet</string>
 	<key>CFBundleInfoDictionaryVersion</key>
