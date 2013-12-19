@@ -54,13 +54,4 @@
 	[datePicker setDate:[NSDate date]];
 }
 
-
-- (void)viewDidUnload {
-    self.datePicker = nil;
-    [super viewDidUnload];
-}
-
-
-
-
 @end

@@ -64,15 +64,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewDidUnload {
-    self.kolodvoriTable = nil;
-	self.kolodvori = nil;
-    self.kolodvoriFiltered = nil;
-	[self setSavedSearchTerm:[[[self searchDisplayController] searchBar] text]];	
-    [super viewDidUnload];
-}
-
-
 #pragma mark -
 #pragma mark Table Vuew Data Source Methods
 

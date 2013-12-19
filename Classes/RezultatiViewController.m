@@ -484,16 +484,4 @@ numberOfRowsInSection:(NSInteger)section {
 
 }
 
-- (void)viewDidUnload {
-    self.rezultati = nil;
-    self.rezultatiTable = nil;
-    self.receivedData = nil;
-    self.izravniSegmented = nil;
-    self.tvCell = nil;    
-    [super viewDidUnload];
-}
-
-
-
-
 @end
