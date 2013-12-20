@@ -42,10 +42,6 @@
 		1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4914AF8BF10001467E /* LiveInfoView.xib */; };
 		1AAE71821406E68D001A2CA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAE71811406E68D001A2CA1 /* CoreData.framework */; };
 		1AB4C24818634BC70020EDD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4C24718634BC70020EDD3 /* main.m */; };
-		1ACFEFA414AA76E90084FAB2 /* in190.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF5A14AA76E90084FAB2 /* in190.png */; };
-		1ACFEFA514AA76E90084FAB2 /* in220.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF5B14AA76E90084FAB2 /* in220.png */; };
-		1ACFEFA814AA76E90084FAB2 /* out190.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF5E14AA76E90084FAB2 /* out190.png */; };
-		1ACFEFA914AA76E90084FAB2 /* out220.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF5F14AA76E90084FAB2 /* out220.png */; };
 		1ACFEFAF14AA76E90084FAB2 /* DolazniView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6614AA76E90084FAB2 /* DolazniView.xib */; };
 		1ACFEFB014AA76E90084FAB2 /* FavoritiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6714AA76E90084FAB2 /* FavoritiView.xib */; };
 		1ACFEFB114AA76E90084FAB2 /* FavoritTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */; };
@@ -145,10 +141,6 @@
 		1AB4C24718634BC70020EDD3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iHZNet/main.m; sourceTree = "<group>"; };
 		1AB4C24B18634BFE0020EDD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = iHZNet/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AB4C25318634FA30020EDD3 /* iHZNet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "iHZNet-Prefix.pch"; path = "iHZNet/iHZNet-Prefix.pch"; sourceTree = "<group>"; };
-		1ACFEF5A14AA76E90084FAB2 /* in190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = in190.png; sourceTree = "<group>"; };
-		1ACFEF5B14AA76E90084FAB2 /* in220.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = in220.png; sourceTree = "<group>"; };
-		1ACFEF5E14AA76E90084FAB2 /* out190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = out190.png; sourceTree = "<group>"; };
-		1ACFEF5F14AA76E90084FAB2 /* out220.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = out220.png; sourceTree = "<group>"; };
 		1ACFEF6614AA76E90084FAB2 /* DolazniView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DolazniView.xib; sourceTree = "<group>"; };
 		1ACFEF6714AA76E90084FAB2 /* FavoritiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritiView.xib; sourceTree = "<group>"; };
 		1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritTableViewCell.xib; sourceTree = "<group>"; };
@@ -321,30 +313,10 @@
 		1ACFEF1F14AA76E90084FAB2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1ACFEF2014AA76E90084FAB2 /* Artwork */,
 				1ACFEF6514AA76E90084FAB2 /* XIB */,
 			);
 			name = Resources;
 			path = ../Resources;
-			sourceTree = "<group>";
-		};
-		1ACFEF2014AA76E90084FAB2 /* Artwork */ = {
-			isa = PBXGroup;
-			children = (
-				1ACFEF5614AA76E90084FAB2 /* XIB Images */,
-			);
-			path = Artwork;
-			sourceTree = "<group>";
-		};
-		1ACFEF5614AA76E90084FAB2 /* XIB Images */ = {
-			isa = PBXGroup;
-			children = (
-				1ACFEF5A14AA76E90084FAB2 /* in190.png */,
-				1ACFEF5B14AA76E90084FAB2 /* in220.png */,
-				1ACFEF5E14AA76E90084FAB2 /* out190.png */,
-				1ACFEF5F14AA76E90084FAB2 /* out220.png */,
-			);
-			path = "XIB Images";
 			sourceTree = "<group>";
 		};
 		1ACFEF6514AA76E90084FAB2 /* XIB */ = {
@@ -509,10 +481,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A866E211863394B00821AA1 /* Images.xcassets in Resources */,
-				1ACFEFA414AA76E90084FAB2 /* in190.png in Resources */,
-				1ACFEFA514AA76E90084FAB2 /* in220.png in Resources */,
-				1ACFEFA814AA76E90084FAB2 /* out190.png in Resources */,
-				1ACFEFA914AA76E90084FAB2 /* out220.png in Resources */,
 				1ACFEFAF14AA76E90084FAB2 /* DolazniView.xib in Resources */,
 				1ACFEFB014AA76E90084FAB2 /* FavoritiView.xib in Resources */,
 				1ACFEFB114AA76E90084FAB2 /* FavoritTableViewCell.xib in Resources */,
