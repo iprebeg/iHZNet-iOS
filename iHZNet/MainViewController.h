@@ -12,7 +12,6 @@
 
 #import "OdlazniViewController.h"
 #import "DolazniViewController.h"
-#import "VrijemeViewController.h"
 #import "RezultatiViewController.h"
 #import "FavoritiViewController.h"
 #import "InfoViewController.h"
@@ -22,22 +21,7 @@
 #define kVrijemeIndex 2
 
 
-@interface MainViewController : UIViewController 
-    <UIActionSheetDelegate> 
-{
-    UILabel *infoLabel;
-    UIToolbar *toolbar;
-    UIButton *searchButton;
-    UITableView *izbornikTable;
-    OdlazniViewController *polazniController;
-    DolazniViewController *odredisniController;
-    VrijemeViewController *vrijemeController;
-    RezultatiViewController *rezultatiController;
-    FavoritiViewController *favoritiController;
-    InfoViewController *infoController;
-    
-    NSManagedObjectContext *managedObjectContext;
-}
+@interface MainViewController : UIViewController <UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
@@ -45,7 +29,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *izbornikTable;
 @property (strong, nonatomic) OdlazniViewController *polazniController;
 @property (strong, nonatomic) DolazniViewController *odredisniController;
-@property (strong, nonatomic) VrijemeViewController *vrijemeController;
 @property (strong, nonatomic) RezultatiViewController *rezultatiController;
 @property (strong, nonatomic) FavoritiViewController *favoritiController;
 @property (strong, nonatomic) InfoViewController *infoController;

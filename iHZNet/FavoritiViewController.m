@@ -96,8 +96,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     iface.odlazniKolodvor.idKolodvora = idOd;
     
     //////
-
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.tabBarController setSelectedIndex:0];
+    //[self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -179,7 +179,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     favoritiTable.backgroundColor = [UIColor clearColor];
     favoritiTable.opaque = NO;
     favoritiTable.backgroundView = nil;

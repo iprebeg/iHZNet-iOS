@@ -12,6 +12,8 @@
 #import "AppDelegate.h"
 #import "Favorit.h"
 
+#import <ActionSheetPicker/ActionSheetPicker.h>
+
 static BOOL backendLoaded = NO;
 static UIAlertView *loadingView = nil;
 
@@ -21,7 +23,6 @@ static UIAlertView *loadingView = nil;
 @synthesize toolbar;
 @synthesize polazniController;
 @synthesize odredisniController;
-@synthesize vrijemeController;
 @synthesize rezultatiController;
 @synthesize izbornikTable;
 @synthesize searchButton;
@@ -68,7 +69,7 @@ numberOfRowsInSection:(NSInteger)section {
         contentForThisRow = @"Dolazak";
         detailsForThisRow = iface.dolazniKolodvor.naziv;
     } else if (row == kVrijemeIndex) {
-        contentForThisRow = @"Vrijeme";
+        contentForThisRow = @"Datum";
         
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateStyle:NSDateFormatterShortStyle];
@@ -107,14 +108,21 @@ numberOfRowsInSection:(NSInteger)section {
         [self.navigationController pushViewController:odredisniController animated:YES];
         
     } else if (row == kVrijemeIndex) {
-        if (vrijemeController == nil) {
-            vrijemeController = [[VrijemeViewController alloc] init];
-        }
-        
-        [self.navigationController pushViewController:vrijemeController animated:YES];
-    
+       
+        //[self.navigationController pushViewController:vrijemeController animated:YES];
+        ActionSheetDatePicker *picker = [[ActionSheetDatePicker alloc] initWithTitle:@"Datum" datePickerMode:UIDatePickerModeDate selectedDate:[[HZiface sharedHZiface] vrijeme] target:self action:@selector(dateWasSelected:element:) origin:tableView];
+        [picker showActionSheetPicker];
     }        
 }
+
+- (void)dateWasSelected:(NSDate *)selectedDate element:(id)element {
+    
+    HZiface *iface = [HZiface sharedHZiface];
+    iface.vrijeme = selectedDate;
+    
+    [self.izbornikTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0] ] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 #pragma mark -
 #pragma mark Event Handlers for Buttons and other events
@@ -305,7 +313,7 @@ numberOfRowsInSection:(NSInteger)section {
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     izbornikTable.backgroundColor = [UIColor clearColor];
     izbornikTable.opaque = NO;

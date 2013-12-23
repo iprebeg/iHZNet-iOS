@@ -37,7 +37,6 @@
 		1A866E301863394B00821AA1 /* RezultatiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E121863394B00821AA1 /* RezultatiParser.m */; };
 		1A866E311863394B00821AA1 /* RezultatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E141863394B00821AA1 /* RezultatiViewController.m */; };
 		1A866E331863394B00821AA1 /* Stajaliste.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E181863394B00821AA1 /* Stajaliste.m */; };
-		1A866E341863394B00821AA1 /* VrijemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E1A1863394B00821AA1 /* VrijemeViewController.m */; };
 		1AA02B4814AF8AF10001467E /* ProlazisteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */; };
 		1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4914AF8BF10001467E /* LiveInfoView.xib */; };
 		1AAE71821406E68D001A2CA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAE71811406E68D001A2CA1 /* CoreData.framework */; };
@@ -53,7 +52,6 @@
 		1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */; };
 		1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */; };
 		1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */; };
-		1ACFEFBA14AA76E90084FAB2 /* VrijemeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF7114AA76E90084FAB2 /* VrijemeView.xib */; };
 		1ACFEFBE14AA7AD50084FAB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACFEFBD14AA7AD50084FAB2 /* SystemConfiguration.framework */; };
 		1ACFEFBF14AA7AFB0084FAB2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC84FF13C642F20047A424 /* MessageUI.framework */; };
 		1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */; };
@@ -132,8 +130,6 @@
 		1A866E141863394B00821AA1 /* RezultatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RezultatiViewController.m; sourceTree = "<group>"; };
 		1A866E171863394B00821AA1 /* Stajaliste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stajaliste.h; sourceTree = "<group>"; };
 		1A866E181863394B00821AA1 /* Stajaliste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stajaliste.m; sourceTree = "<group>"; };
-		1A866E191863394B00821AA1 /* VrijemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VrijemeViewController.h; sourceTree = "<group>"; };
-		1A866E1A1863394B00821AA1 /* VrijemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VrijemeViewController.m; sourceTree = "<group>"; };
 		1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProlazisteTableViewCell.xib; sourceTree = "<group>"; };
 		1AA02B4914AF8BF10001467E /* LiveInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveInfoView.xib; sourceTree = "<group>"; };
 		1AAE71811406E68D001A2CA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -152,7 +148,6 @@
 		1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PutovanjeTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RezultatiView.xib; sourceTree = "<group>"; };
 		1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RezultatViewController.xib; sourceTree = "<group>"; };
-		1ACFEF7114AA76E90084FAB2 /* VrijemeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VrijemeView.xib; sourceTree = "<group>"; };
 		1ACFEFBD14AA7AD50084FAB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StajalisteTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEFC214AA91420084FAB2 /* LinijaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinijaView.xib; sourceTree = "<group>"; };
@@ -268,8 +263,6 @@
 				1A866E091863394B00821AA1 /* OdlazniViewController.m */,
 				1A866E131863394B00821AA1 /* RezultatiViewController.h */,
 				1A866E141863394B00821AA1 /* RezultatiViewController.m */,
-				1A866E191863394B00821AA1 /* VrijemeViewController.h */,
-				1A866E1A1863394B00821AA1 /* VrijemeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -333,7 +326,6 @@
 				1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */,
 				1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */,
 				1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */,
-				1ACFEF7114AA76E90084FAB2 /* VrijemeView.xib */,
 				1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */,
 				1ACFEFC214AA91420084FAB2 /* LinijaView.xib */,
 				1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */,
@@ -492,7 +484,6 @@
 				1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */,
 				1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */,
 				1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */,
-				1ACFEFBA14AA76E90084FAB2 /* VrijemeView.xib in Resources */,
 				1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */,
 				1ACFEFC314AA91420084FAB2 /* LinijaView.xib in Resources */,
 				1AA02B4814AF8AF10001467E /* ProlazisteTableViewCell.xib in Resources */,
@@ -580,7 +571,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A866E1E1863394B00821AA1 /* FavoritiViewController.m in Sources */,
-				1A866E341863394B00821AA1 /* VrijemeViewController.m in Sources */,
 				1A866E221863394B00821AA1 /* Indicators.m in Sources */,
 				1A866E251863394B00821AA1 /* KolodvorViewController.m in Sources */,
 				1A866E1B1863394B00821AA1 /* iHZNet.xcdatamodeld in Sources */,
