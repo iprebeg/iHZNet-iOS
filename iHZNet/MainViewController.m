@@ -78,7 +78,7 @@ numberOfRowsInSection:(NSInteger)section {
         detailsForThisRow = [df stringFromDate:iface.vrijeme];	
     }
         
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	[[cell textLabel] setText:contentForThisRow];
     [[cell detailTextLabel] setText:detailsForThisRow];
     
