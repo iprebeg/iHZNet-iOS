@@ -114,8 +114,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];    
-   
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"LiveInfo" style:UIBarButtonItemStyleBordered target:self action:@selector(liveInfoButtonPressed:)];
     
     self.navigationItem.rightBarButtonItem = item;

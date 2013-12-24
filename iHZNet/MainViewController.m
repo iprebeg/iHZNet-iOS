@@ -313,8 +313,6 @@ numberOfRowsInSection:(NSInteger)section {
 
 - (void)viewDidLoad
 {
-    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
-    
     izbornikTable.backgroundColor = [UIColor clearColor];
     izbornikTable.opaque = NO;
     izbornikTable.backgroundView = nil;

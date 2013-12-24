@@ -173,8 +173,6 @@ static NSURLConnection *con = nil;
     rezultati = [[NSMutableArray alloc] init ];
     //rezultatiTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
-    
     izravniSegmented = [[UISegmentedControl alloc] initWithItems:[[NSArray alloc] initWithObjects:@"Izravni", @"S presjedanjem" , nil]];
     
     [izravniSegmented setFrame:CGRectMake(100, 6, 210, 30)];

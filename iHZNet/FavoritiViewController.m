@@ -179,7 +179,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)viewDidLoad
 {
-    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     favoritiTable.backgroundColor = [UIColor clearColor];
     favoritiTable.opaque = NO;
     favoritiTable.backgroundView = nil;
