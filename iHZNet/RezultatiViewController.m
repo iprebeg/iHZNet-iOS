@@ -135,10 +135,7 @@ static NSURLConnection *con = nil;
         UIActionSheet *as = [[UIActionSheet alloc]
                               initWithTitle:@"Nisu pronađena putovanja!" delegate:self cancelButtonTitle:segmentButtonTitle destructiveButtonTitle:@"Promijeni pretragu" otherButtonTitles:nil];
         
-        as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
         [as showInView:self.view];
-        
-        
         
         return;
     }
@@ -173,6 +170,7 @@ static NSURLConnection *con = nil;
     rezultati = [[NSMutableArray alloc] init ];
     //rezultatiTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    /*
     izravniSegmented = [[UISegmentedControl alloc] initWithItems:[[NSArray alloc] initWithObjects:@"Izravni", @"S presjedanjem" , nil]];
     
     [izravniSegmented setFrame:CGRectMake(100, 6, 210, 30)];
@@ -192,7 +190,11 @@ static NSURLConnection *con = nil;
     
     ///
     [self.navigationController.navigationBar addSubview:izravniSegmented];
-    
+    */
+
+    [izravniSegmented addTarget:self action:@selector(changedSegment)
+               forControlEvents:UIControlEventValueChanged];
+
     [rezultatiTable reloadData];
     
     [self getRezultati];
@@ -230,36 +232,13 @@ static NSURLConnection *con = nil;
     }
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    
-    [self.navigationController.navigationBar addSubview:izravniSegmented];
-     /*
-    [rezultatiTable reloadData];
 
-    [self getRezultati];
-    */
-}
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-    [izravniSegmented removeFromSuperview];
-    
     [con cancel];
     [[Indicators sharedIndicators] stop];    
 }
-
-/*
-- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section 
-{
-    
-    headerImage.frame = CGRectMake(0, 0, tableView.bounds.size.width, 30);
-    
-    [headerView addSubview:headerImage];
-    
-    return headerView;
-}
-*/
 
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {

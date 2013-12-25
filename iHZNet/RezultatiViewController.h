@@ -56,7 +56,7 @@
 @property (strong, nonatomic) NSMutableArray *rezultati;
 @property (strong, nonatomic) IBOutlet UITableView *rezultatiTable;
 @property (copy, nonatomic) NSMutableData *receivedData;
-@property (strong, nonatomic) UISegmentedControl *izravniSegmented;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *izravniSegmented;
 @property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
 
 @end

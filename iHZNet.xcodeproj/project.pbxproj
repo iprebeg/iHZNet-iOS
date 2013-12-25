@@ -45,8 +45,6 @@
 		1ACFEFB214AA76E90084FAB2 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */; };
 		1ACFEFB314AA76E90084FAB2 /* LinijaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */; };
 		1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */; };
-		1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */; };
-		1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */; };
 		1ACFEFBE14AA7AD50084FAB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACFEFBD14AA7AD50084FAB2 /* SystemConfiguration.framework */; };
 		1ACFEFBF14AA7AFB0084FAB2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC84FF13C642F20047A424 /* MessageUI.framework */; };
 		1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */; };
@@ -136,8 +134,6 @@
 		1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinijaTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PutovanjeTableViewCell.xib; sourceTree = "<group>"; };
-		1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RezultatiView.xib; sourceTree = "<group>"; };
-		1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RezultatViewController.xib; sourceTree = "<group>"; };
 		1ACFEFBD14AA7AD50084FAB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StajalisteTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEFC214AA91420084FAB2 /* LinijaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinijaView.xib; sourceTree = "<group>"; };
@@ -309,8 +305,6 @@
 				1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */,
 				1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */,
 				1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */,
-				1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */,
-				1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */,
 				1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */,
 				1ACFEFC214AA91420084FAB2 /* LinijaView.xib */,
 				1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */,
@@ -462,8 +456,6 @@
 				1ACFEFB214AA76E90084FAB2 /* InfoViewController.xib in Resources */,
 				1ACFEFB314AA76E90084FAB2 /* LinijaTableViewCell.xib in Resources */,
 				1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */,
-				1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */,
-				1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */,
 				1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */,
 				1ACFEFC314AA91420084FAB2 /* LinijaView.xib in Resources */,
 				1AA02B4814AF8AF10001467E /* ProlazisteTableViewCell.xib in Resources */,
