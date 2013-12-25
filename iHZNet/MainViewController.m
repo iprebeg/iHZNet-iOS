@@ -19,15 +19,8 @@ static UIAlertView *loadingView = nil;
 
 @implementation MainViewController
 
-@synthesize infoLabel;
-@synthesize toolbar;
-@synthesize polazniController;
-@synthesize odredisniController;
-@synthesize rezultatiController;
 @synthesize izbornikTable;
 @synthesize searchButton;
-@synthesize favoritiController;
-@synthesize infoController;
 @synthesize managedObjectContext;
 
 #pragma mark -
@@ -92,24 +85,16 @@ numberOfRowsInSection:(NSInteger)section {
     NSInteger row = [indexPath row];    
     
 
-    if (row == kOdlazniIndex) {
-        if (polazniController == nil) {
-            polazniController = [[OdlazniViewController alloc] init];
-        }
-        
-        [self.navigationController pushViewController: polazniController animated:YES];
-
-        
-    } else if (row == kDolazniIndex) {
-        if (odredisniController == nil) {
-            odredisniController = [[DolazniViewController alloc] init];
-        }
-        
-        [self.navigationController pushViewController:odredisniController animated:YES];
-        
-    } else if (row == kVrijemeIndex) {
-       
-        //[self.navigationController pushViewController:vrijemeController animated:YES];
+    if (row == kOdlazniIndex)
+    {
+        [self performSegueWithIdentifier:@"odlazniSegue" sender:self];
+    }
+    else if (row == kDolazniIndex)
+    {
+        [self performSegueWithIdentifier:@"dolazniSegue" sender:self];
+    }
+    else if (row == kVrijemeIndex)
+    {
         ActionSheetDatePicker *picker = [[ActionSheetDatePicker alloc] initWithTitle:@"Datum" datePickerMode:UIDatePickerModeDate selectedDate:[[HZiface sharedHZiface] vrijeme] target:self action:@selector(dateWasSelected:element:) origin:tableView];
         [picker showActionSheetPicker];
     }        
@@ -137,7 +122,6 @@ numberOfRowsInSection:(NSInteger)section {
     
     [self updateFavorites];
     
-    toolbar.hidden = NO;
     searchButton.hidden = NO;
     
     [izbornikTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
@@ -146,17 +130,9 @@ numberOfRowsInSection:(NSInteger)section {
 }
 
 - (IBAction)searchButtonPressed:(id)sender
-{   
-    if (rezultatiController != nil)
-    {
-        rezultatiController = nil;
-    }
-    
-    if (rezultatiController == nil) {
-        rezultatiController = [[RezultatiViewController alloc] init];
-    }
-    
-    [self.navigationController pushViewController:rezultatiController animated:YES];
+{
+    //[self.navigationController pushViewController:rezultatiController animated:YES];
+    [self performSegueWithIdentifier:@"rezultatiSegue" sender:self];
 }
 
 
@@ -238,29 +214,6 @@ numberOfRowsInSection:(NSInteger)section {
     [alert show];
 }  
 
--(IBAction)favoriteButtonPressed:(id)sender
-{
-    if (favoritiController == nil) {
-        favoritiController = [[FavoritiViewController alloc] init];    
-    }
-    
-    [self.navigationController pushViewController:favoritiController animated:YES];
-    
-    //[self.navigationController presentModalViewController:favoritiController animated:YES];
-
-    
-}
-
-- (IBAction)infoButtonPressed:(id)sender 
-{
-    if (infoController == nil) 
-    {
-        infoController = [[InfoViewController alloc] init];
-    }
-    
-    [self.navigationController pushViewController:infoController animated:YES];
-}
-
 - (void)updateFavorites
 {
     // Define our table/entity to use  
@@ -337,8 +290,6 @@ numberOfRowsInSection:(NSInteger)section {
         [loadingView addSubview:indicator];
         ////
     
-        
-        toolbar.hidden = YES;
         searchButton.hidden = YES;
         
         HZiface *iface = [HZiface sharedHZiface];

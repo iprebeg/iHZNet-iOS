@@ -41,14 +41,9 @@
 		1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4914AF8BF10001467E /* LiveInfoView.xib */; };
 		1AAE71821406E68D001A2CA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAE71811406E68D001A2CA1 /* CoreData.framework */; };
 		1AB4C24818634BC70020EDD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4C24718634BC70020EDD3 /* main.m */; };
-		1ACFEFAF14AA76E90084FAB2 /* DolazniView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6614AA76E90084FAB2 /* DolazniView.xib */; };
-		1ACFEFB014AA76E90084FAB2 /* FavoritiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6714AA76E90084FAB2 /* FavoritiView.xib */; };
 		1ACFEFB114AA76E90084FAB2 /* FavoritTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */; };
 		1ACFEFB214AA76E90084FAB2 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */; };
 		1ACFEFB314AA76E90084FAB2 /* LinijaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */; };
-		1ACFEFB414AA76E90084FAB2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6B14AA76E90084FAB2 /* MainViewController.xib */; };
-		1ACFEFB514AA76E90084FAB2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6C14AA76E90084FAB2 /* MainWindow.xib */; };
-		1ACFEFB614AA76E90084FAB2 /* OdlazniView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6D14AA76E90084FAB2 /* OdlazniView.xib */; };
 		1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */; };
 		1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */; };
 		1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */; };
@@ -137,14 +132,9 @@
 		1AB4C24718634BC70020EDD3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iHZNet/main.m; sourceTree = "<group>"; };
 		1AB4C24B18634BFE0020EDD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = iHZNet/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AB4C25318634FA30020EDD3 /* iHZNet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "iHZNet-Prefix.pch"; path = "iHZNet/iHZNet-Prefix.pch"; sourceTree = "<group>"; };
-		1ACFEF6614AA76E90084FAB2 /* DolazniView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DolazniView.xib; sourceTree = "<group>"; };
-		1ACFEF6714AA76E90084FAB2 /* FavoritiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritiView.xib; sourceTree = "<group>"; };
 		1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinijaTableViewCell.xib; sourceTree = "<group>"; };
-		1ACFEF6B14AA76E90084FAB2 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		1ACFEF6C14AA76E90084FAB2 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		1ACFEF6D14AA76E90084FAB2 /* OdlazniView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OdlazniView.xib; sourceTree = "<group>"; };
 		1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PutovanjeTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RezultatiView.xib; sourceTree = "<group>"; };
 		1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RezultatViewController.xib; sourceTree = "<group>"; };
@@ -315,14 +305,9 @@
 		1ACFEF6514AA76E90084FAB2 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				1ACFEF6614AA76E90084FAB2 /* DolazniView.xib */,
-				1ACFEF6714AA76E90084FAB2 /* FavoritiView.xib */,
 				1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */,
 				1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */,
 				1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */,
-				1ACFEF6B14AA76E90084FAB2 /* MainViewController.xib */,
-				1ACFEF6C14AA76E90084FAB2 /* MainWindow.xib */,
-				1ACFEF6D14AA76E90084FAB2 /* OdlazniView.xib */,
 				1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */,
 				1ACFEF6F14AA76E90084FAB2 /* RezultatiView.xib */,
 				1ACFEF7014AA76E90084FAB2 /* RezultatViewController.xib */,
@@ -473,14 +458,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A866E211863394B00821AA1 /* Images.xcassets in Resources */,
-				1ACFEFAF14AA76E90084FAB2 /* DolazniView.xib in Resources */,
-				1ACFEFB014AA76E90084FAB2 /* FavoritiView.xib in Resources */,
 				1ACFEFB114AA76E90084FAB2 /* FavoritTableViewCell.xib in Resources */,
 				1ACFEFB214AA76E90084FAB2 /* InfoViewController.xib in Resources */,
 				1ACFEFB314AA76E90084FAB2 /* LinijaTableViewCell.xib in Resources */,
-				1ACFEFB414AA76E90084FAB2 /* MainViewController.xib in Resources */,
-				1ACFEFB514AA76E90084FAB2 /* MainWindow.xib in Resources */,
-				1ACFEFB614AA76E90084FAB2 /* OdlazniView.xib in Resources */,
 				1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */,
 				1ACFEFB814AA76E90084FAB2 /* RezultatiView.xib in Resources */,
 				1ACFEFB914AA76E90084FAB2 /* RezultatViewController.xib in Resources */,
