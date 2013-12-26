@@ -300,17 +300,6 @@ numberOfRowsInSection:(NSInteger)section {
     
     [super viewDidLoad];
     
-    UIImage *buttonImageNormal = [UIImage imageNamed:@"greenButton.png"];
-    UIImage *stretchableButtonImageNormal = [buttonImageNormal
-                                             stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-    [searchButton setBackgroundImage:stretchableButtonImageNormal
-                                 forState:UIControlStateNormal];
-    UIImage *buttonImagePressed = [UIImage imageNamed:@"darkgreenButton.png"];
-    UIImage *stretchableButtonImagePressed = [buttonImagePressed
-                                              stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-    [searchButton setBackgroundImage:stretchableButtonImagePressed
-                                 forState:UIControlStateHighlighted];    
-    
     [izbornikTable reloadData];
 }
 
