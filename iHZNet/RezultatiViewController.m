@@ -21,11 +21,13 @@
 @synthesize rezultatiTable;
 @synthesize receivedData;
 @synthesize izravniSegmented;
-@synthesize tvCell;
 
 static NSURLConnection *con = nil;
 
--(void)getRezultati 
+static NSString *LinijaCellIdentifier = @"LinijaCellIdentifier";
+static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
+
+-(void)getRezultati
 {
     rezultatiTable.hidden = YES;
     
@@ -275,9 +277,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([putovanje izravno] || row != 0)
     {
         NSUInteger index  = [putovanje izravno] ? 0 : (row - 1);
-        LinijaViewController *linijaViewController = [[LinijaViewController alloc] initWithLinija:[[putovanje linije] objectAtIndex:index]];
         
-        [self.navigationController pushViewController:linijaViewController animated:YES];
+        _selectedLinija = [[putovanje linije] objectAtIndex:index];
+        
+        [self performSegueWithIdentifier:@"linijaSegue" sender:self];
+        
         return;
     }
     
@@ -293,6 +297,18 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
       
         [rezultatiTable reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationFade];
     }    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"linijaSegue"])
+    {
+        LinijaViewController *linijaVC = (LinijaViewController *)segue.destinationViewController;
+        if (_selectedLinija != nil && linijaVC != nil)
+        {
+            [linijaVC configureWithLinija:_selectedLinija];
+        }
+    }
 }
 
 -(NSInteger)tableView:(UITableView*)tableView
@@ -335,19 +351,7 @@ numberOfRowsInSection:(NSInteger)section {
         //NSLog(@"showing linija");
         
         /* cell je Linija */
-        static NSString *LinijaCellIdentifier = @"LinijaCellIdentifier";
         cell = [tableView dequeueReusableCellWithIdentifier:LinijaCellIdentifier];
-    
-        if (cell == nil) {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LinijaTableViewCell"
-                                                     owner:self options:nil];
-            if ([nib count] > 0) {
-                cell = self.tvCell;
-                //cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellback"]]; 
-            } else {
-                NSLog(@"failed to load CustomCell nib file!");
-            }     
-        }
     
         UILabel *odKolLabel = (UILabel *)[cell viewWithTag:kOdKolodvorTag];
         UILabel *doKolLabel = (UILabel *)[cell viewWithTag:kDoKolodvorTag];
@@ -401,19 +405,7 @@ numberOfRowsInSection:(NSInteger)section {
         
         //NSLog(@"showing putovanje");
         
-        static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
         cell = [tableView dequeueReusableCellWithIdentifier:PutovanjeCellIdentifier];
-        
-        if (cell == nil) {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PutovanjeTableViewCell"
-                                                         owner:self options:nil];
-            if ([nib count] > 0) {
-                cell = self.tvCell;
-                //cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellback"]]; 
-            } else {
-                NSLog(@"failed to load CustomCell nib file!");
-            }     
-        }
         
         UILabel *odKolLabel = (UILabel *)[cell viewWithTag:kPutOdKolodvorTag];
         UILabel *doKolLabel = (UILabel *)[cell viewWithTag:kPutDoKolodvorTag];

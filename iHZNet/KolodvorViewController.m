@@ -59,14 +59,6 @@
     }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark -
-#pragma mark Table Vuew Data Source Methods
-
 -(NSInteger)tableView:(UITableView*)tableView
 numberOfRowsInSection:(NSInteger)section {
 	

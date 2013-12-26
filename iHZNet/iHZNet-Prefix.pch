@@ -32,6 +32,6 @@
 
     #define kProlazisteTableViewCellHeight 30
 
-    #define kFavoritTableViewCellHeight 50
+    #define kFavoritTableViewCellHeight 44
 
 #endif

@@ -11,26 +11,19 @@
 #import "Stajaliste.h"
 #import "LiveInfoViewController.h"
 
-
-
 @implementation LinijaViewController
 
 @synthesize stajalista;
 @synthesize stajalistaTable;
-@synthesize tvCell;
-@synthesize liveInfoButton;
 @synthesize linija;
 
-- (id)initWithLinija:(Linija*)theLinija
+static NSString *FavoritCellIdentifier = @"StajalisteCellIdentifier";
+
+- (void)configureWithLinija:(Linija*)theLinija
 {
-    if (self = [super init])
-    {
-        linija = theLinija;
-        stajalista = [linija stajalista];
-        self.title = [linija nazivLinije];
-    }
-    
-    return self;
+    linija = theLinija;
+    stajalista = [linija stajalista];
+    self.title = [linija nazivLinije];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -39,32 +32,18 @@
     return [stajalista count];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{    
     return kStajalisteTableCellHeight;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSUInteger row = indexPath.row;
     
     UITableViewCell *cell = nil;
     
-    static NSString *FavoritCellIdentifier = @"StajalisteCellIdentifier";
     cell = [tableView dequeueReusableCellWithIdentifier:FavoritCellIdentifier];
-    
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"StajalisteTableViewCell" owner:self options:nil];
-        if ([nib count] > 0) {
-            cell = self.tvCell;
-            //cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellback"]];
-        } else {
-            NSLog(@"failed to load CustomCell nib file!");
-        }     
-    }
     
     Stajaliste *stajaliste = [stajalista objectAtIndex:row];
 
@@ -79,46 +58,22 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return cell;
 }       
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (IBAction)liveInfoButtonPressed:(id)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [self performSegueWithIdentifier:@"liveinfoSegue" sender:self];
 }
 
-- (void)didReceiveMemoryWarning
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
-
-- (void) viewWillAppear:(BOOL)animated
-{
+    if([segue.identifier isEqualToString:@"liveinfoSegue"])
+    {
+        LiveInfoViewController *liveInfoVC = (LiveInfoViewController *)segue.destinationViewController;
+        if (linija != nil && liveInfoVC != nil)
+        {
+            [liveInfoVC configureWithLinija:linija];
+        }
     }
 
-- (void) liveInfoButtonPressed:(id)sender
-{
-    LiveInfoViewController *liveInfoViewController = [[LiveInfoViewController alloc] initWithLinija:linija];
-    
-    [self.navigationController pushViewController:liveInfoViewController animated:YES];
-}
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"LiveInfo" style:UIBarButtonItemStyleBordered target:self action:@selector(liveInfoButtonPressed:)];
-    
-    self.navigationItem.rightBarButtonItem = item;
-    
-    [super viewDidLoad];
 }
 
 @end

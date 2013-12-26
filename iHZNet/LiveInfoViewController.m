@@ -16,21 +16,16 @@
 
 @synthesize prolazista;
 @synthesize prolazistaTable;
-@synthesize tvCell;
 @synthesize linija;
 
 static NSURLConnection *con = nil;
 static NSMutableData *receivedData = nil;
+static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
 
-- (id)initWithLinija:(Linija*)theLinija
+- (void)configureWithLinija:(Linija*)theLinija
 {
-    if (self = [super init])
-    {
-        linija = theLinija;
-        self.title = @"Live Info";
-    }
-    
-    return self;
+    linija = theLinija;
+    self.title = [[linija nazivLinije] stringByAppendingString:@" live"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -39,32 +34,19 @@ static NSMutableData *receivedData = nil;
     return [prolazista count];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return kProlazisteTableViewCellHeight;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSUInteger row = indexPath.row;
     
     UITableViewCell *cell = nil;
     
-    static NSString *FavoritCellIdentifier = @"ProlazisteCellIdentifier";
-    cell = [tableView dequeueReusableCellWithIdentifier:FavoritCellIdentifier];
-    
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ProlazisteTableViewCell" owner:self options:nil];
-        if ([nib count] > 0) {
-            cell = self.tvCell;
-            //cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellback"]];
-        } else {
-            NSLog(@"failed to load CustomCell nib file!");
-        }     
-    }
+    cell = [tableView dequeueReusableCellWithIdentifier:ProlazisteCellIdentifier];
     
     Prolaziste *prolaziste = [prolazista objectAtIndex:row];
     
@@ -84,8 +66,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return cell;
 }       
-
-
 
 -(void)getLiveInfo
 {
@@ -180,7 +160,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.prolazista count] == 0)
     {
         UIActionSheet *as = [[UIActionSheet alloc]
-                             initWithTitle:@"Live info nije dostupan!" delegate:self cancelButtonTitle:@"Povratak" destructiveButtonTitle:@"Pokušaj ponovo" otherButtonTitles:nil];
+                             initWithTitle:@"Live info za traženu liniju trenutno nije dostupan!" delegate:self cancelButtonTitle:@"Povratak" destructiveButtonTitle:@"Pokušaj ponovo" otherButtonTitles:nil];
         
         as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
         [as showInView:self.view];
@@ -216,28 +196,13 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
-- (void) refreshButtonPressed:(id)sender
+- (IBAction)refreshButtonPressed:(id)sender
 {
     [self getLiveInfo];
 }
 
-#pragma mark - View lifecycle
-
-
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-/*
-- (void)loadView
-{
-}
-*/
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"switch"] 
-                                                              style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed:)];
-    self.navigationItem.rightBarButtonItem = item;
-
     [super viewDidLoad];
     [self getLiveInfo];
 }

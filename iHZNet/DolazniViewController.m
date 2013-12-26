@@ -12,15 +12,6 @@
 
 @implementation DolazniViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        self.title = @"Dolazak";
-    }
-    return self;
-}
-# pragma mark -
-# pragma mark Table Delegate Methods
-
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     

@@ -8,12 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KolodvorViewController.h"
-#import "DolazniViewController.h"
 
 @interface OdlazniViewController : KolodvorViewController 
-{
-}
-
-
 
 @end

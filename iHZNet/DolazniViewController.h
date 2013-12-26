@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "KolodvorViewController.h"
 
-
-@interface DolazniViewController : KolodvorViewController {
-
-}
+@interface DolazniViewController : KolodvorViewController
 
 @end

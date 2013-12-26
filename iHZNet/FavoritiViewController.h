@@ -12,20 +12,10 @@
 #define kFavOdKolodvorTag 1
 #define kFavDoKolodvorTag 2
 
-@interface FavoritiViewController : UIViewController
-    <UITableViewDelegate, UITableViewDataSource> 
-{
-    UITableView *favoritiTable;
-    UITableViewCell *tvCell;
-    NSMutableArray *favoriti;
-    
-    NSManagedObjectContext *managedObjectContext;
-}
+@interface FavoritiViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> 
 
 @property (strong, nonatomic) IBOutlet UITableView *favoritiTable;
-@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
 @property (strong, nonatomic) NSMutableArray *favoriti;
-
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;  
 
 - (void) fetchRecords;  

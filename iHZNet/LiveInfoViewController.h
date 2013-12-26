@@ -16,21 +16,13 @@
 #define kVrijemeOdlaskaProlazisteTag 14
 #define kKasnjenjeOdlaskaProlazisteTag 15
 
-@interface LiveInfoViewController : UIViewController
-<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
-{
-    UITableView *prolazistaTable;
-    UITableViewCell *tvCell;
-    NSMutableArray *prolazista;
-    Linija *linija;
-}
+@interface LiveInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 
 @property (strong, nonatomic) Linija *linija;
 @property (strong, nonatomic) IBOutlet UITableView *prolazistaTable;
-@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
 @property (strong, nonatomic) NSMutableArray *prolazista;
 
-- (id)initWithLinija:(Linija*)linija;
-
+- (void)configureWithLinija:(Linija*)linija;
+- (IBAction)refreshButtonPressed:(id)sender;
 
 @end

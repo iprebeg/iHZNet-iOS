@@ -13,23 +13,13 @@
 #define kVrijemeDolaskaStajalisteTag 2
 #define kVrijemeOdlaskaStajalisteTag 3
 
-@interface LinijaViewController : UIViewController
-<UITableViewDelegate, UITableViewDataSource>
-{
-    UITableView *stajalistaTable;
-    UITableViewCell *tvCell;
-    NSArray *stajalista;
-    UIButton *liveInfoButton;
-    Linija *linija;
-}
+@interface LinijaViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *stajalistaTable;
-@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
 @property (strong, nonatomic) NSArray *stajalista;
-@property (strong, nonatomic) UIButton *liveInfoButton;
 @property (strong, nonatomic) Linija *linija;
 
-
-- (id)initWithLinija:(Linija*)linija;
+- (void)configureWithLinija:(Linija*)linija;
+- (IBAction)liveInfoButtonPressed:(id)sender;
 
 @end

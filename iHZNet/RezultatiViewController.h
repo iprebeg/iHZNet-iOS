@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Linija.h"
 
 #define kOdKolodvorTag 1
 #define kOdVrijemeTag  2
@@ -41,22 +42,15 @@
 #define kDatumTag 2
 
 #define kLinijaCellHeight    76
-#define kPutovanjeCellHeight    95
+#define kPutovanjeCellHeight    90
 
-@interface RezultatiViewController : UIViewController 
-	<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
-{
-	UITableView *rezultatiTable;
-	NSMutableArray *rezultati;
-    NSMutableData *receivedData;
-    UISegmentedControl *izravniSegmented;
-    UITableViewCell *tvCell;
-}
+@interface RezultatiViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
+
 
 @property (strong, nonatomic) NSMutableArray *rezultati;
 @property (strong, nonatomic) IBOutlet UITableView *rezultatiTable;
 @property (copy, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *izravniSegmented;
-@property (strong, nonatomic) IBOutlet UITableViewCell *tvCell;
+@property (strong, nonatomic) Linija *selectedLinija;
 
 @end

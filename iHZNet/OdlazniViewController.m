@@ -12,18 +12,7 @@
 #import "Indicators.h"
 #import "RezultatiParser.h"
 
-
 @implementation OdlazniViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        self.title = @"Odlazak";
-    }
-    return self;
-}
-
-# pragma mark -
-# pragma mark Table Delegate Methods
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
@@ -48,13 +37,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         [alert show];
         return;
     }
-
     
     iface.odlazniKolodvor.idKolodvora = kolodvor.idKolodvora;
     iface.odlazniKolodvor.naziv = kolodvor.naziv;
     
     [self.navigationController popViewControllerAnimated:YES];	
 }
-
 
 @end

@@ -14,13 +14,14 @@
 @implementation FavoritiViewController
 
 @synthesize favoritiTable;
-@synthesize tvCell;
 @synthesize favoriti;
 @synthesize managedObjectContext;
 
+static NSString *FavoritCellIdentifier = @"FavoritCellIdentifier";
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    NSLog(@"got %d cells", [favoriti count]);
+    //NSLog(@"got %d cells", [favoriti count]);
     return [favoriti count];
 }
 
@@ -66,7 +67,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Save our fetched data to an array  
     [self setFavoriti: mutableFetchResults];  
     
-    NSLog(@"got %d cells", [favoriti count]);
+    //NSLog(@"got %d cells", [favoriti count]);
     
     [favoritiTable reloadData];
 }   
@@ -146,17 +147,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
     UITableViewCell *cell = nil;
     
-    static NSString *FavoritCellIdentifier = @"FavoritCellIdentifier";
     cell = [tableView dequeueReusableCellWithIdentifier:FavoritCellIdentifier];
-        
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FavoritTableViewCell" owner:self options:nil];
-        if ([nib count] > 0) {
-            cell = self.tvCell;
-        } else {
-            NSLog(@"failed to load CustomCell nib file!");
-        }     
-    }
         
     UILabel *odKolLabel = (UILabel *)[cell viewWithTag:kFavOdKolodvorTag];
     UILabel *doKolLabel = (UILabel *)[cell viewWithTag:kFavDoKolodvorTag];
@@ -193,10 +184,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
     
-    
-    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 @end

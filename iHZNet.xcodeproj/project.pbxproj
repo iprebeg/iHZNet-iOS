@@ -37,18 +37,10 @@
 		1A866E301863394B00821AA1 /* RezultatiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E121863394B00821AA1 /* RezultatiParser.m */; };
 		1A866E311863394B00821AA1 /* RezultatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E141863394B00821AA1 /* RezultatiViewController.m */; };
 		1A866E331863394B00821AA1 /* Stajaliste.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A866E181863394B00821AA1 /* Stajaliste.m */; };
-		1AA02B4814AF8AF10001467E /* ProlazisteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */; };
-		1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA02B4914AF8BF10001467E /* LiveInfoView.xib */; };
 		1AAE71821406E68D001A2CA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAE71811406E68D001A2CA1 /* CoreData.framework */; };
 		1AB4C24818634BC70020EDD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4C24718634BC70020EDD3 /* main.m */; };
-		1ACFEFB114AA76E90084FAB2 /* FavoritTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */; };
-		1ACFEFB214AA76E90084FAB2 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */; };
-		1ACFEFB314AA76E90084FAB2 /* LinijaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */; };
-		1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */; };
 		1ACFEFBE14AA7AD50084FAB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACFEFBD14AA7AD50084FAB2 /* SystemConfiguration.framework */; };
 		1ACFEFBF14AA7AFB0084FAB2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC84FF13C642F20047A424 /* MessageUI.framework */; };
-		1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */; };
-		1ACFEFC314AA91420084FAB2 /* LinijaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFEFC214AA91420084FAB2 /* LinijaView.xib */; };
 		1AFC84F213C642170047A424 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC84F113C642170047A424 /* AVFoundation.framework */; };
 		1AFC84F613C6422C0047A424 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC84F513C6422C0047A424 /* libsqlite3.dylib */; };
 		1AFC84F813C6425D0047A424 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC84F713C6425D0047A424 /* libz.dylib */; };
@@ -123,20 +115,12 @@
 		1A866E141863394B00821AA1 /* RezultatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RezultatiViewController.m; sourceTree = "<group>"; };
 		1A866E171863394B00821AA1 /* Stajaliste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stajaliste.h; sourceTree = "<group>"; };
 		1A866E181863394B00821AA1 /* Stajaliste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stajaliste.m; sourceTree = "<group>"; };
-		1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProlazisteTableViewCell.xib; sourceTree = "<group>"; };
-		1AA02B4914AF8BF10001467E /* LiveInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveInfoView.xib; sourceTree = "<group>"; };
 		1AAE71811406E68D001A2CA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1AB4C24518634BAB0020EDD3 /* iHZNet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "iHZNet-Info.plist"; path = "iHZNet/iHZNet-Info.plist"; sourceTree = "<group>"; };
 		1AB4C24718634BC70020EDD3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iHZNet/main.m; sourceTree = "<group>"; };
 		1AB4C24B18634BFE0020EDD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = iHZNet/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AB4C25318634FA30020EDD3 /* iHZNet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "iHZNet-Prefix.pch"; path = "iHZNet/iHZNet-Prefix.pch"; sourceTree = "<group>"; };
-		1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritTableViewCell.xib; sourceTree = "<group>"; };
-		1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
-		1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinijaTableViewCell.xib; sourceTree = "<group>"; };
-		1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PutovanjeTableViewCell.xib; sourceTree = "<group>"; };
 		1ACFEFBD14AA7AD50084FAB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StajalisteTableViewCell.xib; sourceTree = "<group>"; };
-		1ACFEFC214AA91420084FAB2 /* LinijaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LinijaView.xib; sourceTree = "<group>"; };
 		1AFC84F113C642170047A424 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1AFC84F513C6422C0047A424 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1AFC84F713C6425D0047A424 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -215,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				29B97315FDCFA39411CA2CEA /* Supporting Files */,
-				1ACFEF1F14AA76E90084FAB2 /* Resources */,
 				1A866E361863399900821AA1 /* Service */,
 				1A866E351863396F00821AA1 /* Controller */,
 				1A866E37186339BC00821AA1 /* Model */,
@@ -231,24 +214,24 @@
 		1A866E351863396F00821AA1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A866E061863394B00821AA1 /* MainViewController.h */,
+				1A866E071863394B00821AA1 /* MainViewController.m */,
+				1A866DFC1863394B00821AA1 /* KolodvorViewController.h */,
+				1A866DFD1863394B00821AA1 /* KolodvorViewController.m */,
 				1A866DEB1863394B00821AA1 /* DolazniViewController.h */,
 				1A866DEC1863394B00821AA1 /* DolazniViewController.m */,
+				1A866E081863394B00821AA1 /* OdlazniViewController.h */,
+				1A866E091863394B00821AA1 /* OdlazniViewController.m */,
 				1A866DEF1863394B00821AA1 /* FavoritiViewController.h */,
 				1A866DF01863394B00821AA1 /* FavoritiViewController.m */,
 				1A866DF81863394B00821AA1 /* InfoViewController.h */,
 				1A866DF91863394B00821AA1 /* InfoViewController.m */,
-				1A866DFC1863394B00821AA1 /* KolodvorViewController.h */,
-				1A866DFD1863394B00821AA1 /* KolodvorViewController.m */,
+				1A866E131863394B00821AA1 /* RezultatiViewController.h */,
+				1A866E141863394B00821AA1 /* RezultatiViewController.m */,
 				1A866E001863394B00821AA1 /* LinijaViewController.h */,
 				1A866E011863394B00821AA1 /* LinijaViewController.m */,
 				1A866E041863394B00821AA1 /* LiveInfoViewController.h */,
 				1A866E051863394B00821AA1 /* LiveInfoViewController.m */,
-				1A866E061863394B00821AA1 /* MainViewController.h */,
-				1A866E071863394B00821AA1 /* MainViewController.m */,
-				1A866E081863394B00821AA1 /* OdlazniViewController.h */,
-				1A866E091863394B00821AA1 /* OdlazniViewController.m */,
-				1A866E131863394B00821AA1 /* RezultatiViewController.h */,
-				1A866E141863394B00821AA1 /* RezultatiViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -287,30 +270,6 @@
 				1A866E181863394B00821AA1 /* Stajaliste.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		1ACFEF1F14AA76E90084FAB2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1ACFEF6514AA76E90084FAB2 /* XIB */,
-			);
-			name = Resources;
-			path = ../Resources;
-			sourceTree = "<group>";
-		};
-		1ACFEF6514AA76E90084FAB2 /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-				1ACFEF6814AA76E90084FAB2 /* FavoritTableViewCell.xib */,
-				1ACFEF6914AA76E90084FAB2 /* InfoViewController.xib */,
-				1ACFEF6A14AA76E90084FAB2 /* LinijaTableViewCell.xib */,
-				1ACFEF6E14AA76E90084FAB2 /* PutovanjeTableViewCell.xib */,
-				1ACFEFC014AA90AA0084FAB2 /* StajalisteTableViewCell.xib */,
-				1ACFEFC214AA91420084FAB2 /* LinijaView.xib */,
-				1AA02B4714AF8AF10001467E /* ProlazisteTableViewCell.xib */,
-				1AA02B4914AF8BF10001467E /* LiveInfoView.xib */,
-			);
-			path = XIB;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -452,15 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A866E211863394B00821AA1 /* Images.xcassets in Resources */,
-				1ACFEFB114AA76E90084FAB2 /* FavoritTableViewCell.xib in Resources */,
-				1ACFEFB214AA76E90084FAB2 /* InfoViewController.xib in Resources */,
-				1ACFEFB314AA76E90084FAB2 /* LinijaTableViewCell.xib in Resources */,
-				1ACFEFB714AA76E90084FAB2 /* PutovanjeTableViewCell.xib in Resources */,
-				1ACFEFC114AA90AA0084FAB2 /* StajalisteTableViewCell.xib in Resources */,
-				1ACFEFC314AA91420084FAB2 /* LinijaView.xib in Resources */,
-				1AA02B4814AF8AF10001467E /* ProlazisteTableViewCell.xib in Resources */,
 				1A3043D81863A8AC0093E1C6 /* Storyboard_iPhone.storyboard in Resources */,
-				1AA02B4A14AF8BF10001467E /* LiveInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
