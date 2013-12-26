@@ -81,7 +81,7 @@
         <scene sceneID="wwn-kb-HE3">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Gs6-cQ-FhU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="0Jb-QF-3zn"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="0Jb-QF-3zn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DSc-Uu-ukk">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -105,8 +105,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tEn-u0-zDZ">
-                                <rect key="frame" x="10" y="75" width="300" height="220"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tEn-u0-zDZ">
+                                <rect key="frame" x="10" y="75" width="300" height="192"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -115,7 +115,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-Ck-RCD">
-                                <rect key="frame" x="70" y="361" width="180" height="47"/>
+                                <rect key="frame" x="70" y="317" width="180" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Pretraži raspored">
@@ -777,6 +777,7 @@
         <image name="RAZRED2.png" width="20" height="20"/>
         <image name="RESTORAN.png" width="20" height="20"/>
         <image name="REZERVACIJA.png" width="20" height="20"/>
+        <image name="home" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
         <image name="star" width="30" height="30"/>
         <image name="starplus" width="30" height="30"/>
