@@ -11,6 +11,7 @@
 
 @interface Indicators : NSObject
 
++ (void) showWithStatus:(NSString*)status;
 + (void) show;
 + (void) dismiss;
 

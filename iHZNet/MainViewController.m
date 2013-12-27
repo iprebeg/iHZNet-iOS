@@ -15,6 +15,7 @@
 #import <ActionSheetPicker/ActionSheetPicker.h>
 
 static BOOL backendLoaded = NO;
+static NSString *CellIdentifier = @"CellIdentifier";
 static UIAlertView *loadingView = nil;
 
 @implementation MainViewController
@@ -23,11 +24,7 @@ static UIAlertView *loadingView = nil;
 @synthesize searchButton;
 @synthesize managedObjectContext;
 
-#pragma mark -
-#pragma mark TableView Handling
-
--(NSInteger)tableView:(UITableView*)tableView
-numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
 
     if (backendLoaded)
         return 3;
@@ -35,12 +32,8 @@ numberOfRowsInSection:(NSInteger)section {
         return 0;
 }
 
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	static NSString *CellIdentifier = @"CellIdentifier";
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
@@ -78,13 +71,10 @@ numberOfRowsInSection:(NSInteger)section {
 	return cell;
 }
 
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSInteger row = [indexPath row];    
     
-
     if (row == kOdlazniIndex)
     {
         [self performSegueWithIdentifier:@"odlazniSegue" sender:self];
@@ -107,10 +97,6 @@ numberOfRowsInSection:(NSInteger)section {
     
     [self.izbornikTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0] ] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-
-
-#pragma mark -
-#pragma mark Event Handlers for Buttons and other events
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {

@@ -10,6 +10,12 @@
 
 @implementation Indicators
 
++ (void) showWithStatus:(NSString *)status
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
+    [SVProgressHUD showWithStatus:status];
+}
+
 + (void) show
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
