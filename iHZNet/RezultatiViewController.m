@@ -31,7 +31,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 {
     rezultatiTable.hidden = YES;
     
-    [[Indicators sharedIndicators] start:self];
+    [Indicators show];
 
     HZiface *iface = [HZiface sharedHZiface];
     
@@ -86,7 +86,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
     
-    [[Indicators sharedIndicators] stop];
+    [Indicators show];
     
     [alert show];
     
@@ -110,7 +110,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:@"POKUŠAJTE PONOVNO!" message:@"Nisu pronađena izravna putovanja!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
         
-        [[Indicators sharedIndicators] stop];
+        [Indicators dismiss];
         
         [alert show];
         
@@ -121,7 +121,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     }
 	
 	self.rezultati = [rezParser getRezultati];	
-    [[Indicators sharedIndicators] stop];
+    [Indicators dismiss];
 	[[self rezultatiTable] reloadData];
     
     
@@ -161,7 +161,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 {
     if (buttonIndex == 1)
     {
-        [[Indicators sharedIndicators] start:self];
+        [Indicators show];
         
 		[self getRezultati];
 		[rezultatiTable reloadData];
@@ -214,7 +214,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     }
     
     [con cancel];
-    [[Indicators sharedIndicators] stop];
+    [Indicators dismiss];
     
     [self getRezultati];
 }
@@ -239,7 +239,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 - (void) viewWillDisappear:(BOOL)animated
 {
     [con cancel];
-    [[Indicators sharedIndicators] stop];    
+    [Indicators dismiss];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

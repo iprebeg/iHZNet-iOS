@@ -7,19 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SVProgressHUD.h>
 
-#define kIndicatorHeight 30
+@interface Indicators : NSObject
 
-@interface Indicators : NSObject {
-    UIActivityIndicatorView *activityIndicator;
-    UIApplication *sharedApplication;
-}
-
-@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
-@property (strong, nonatomic) UIApplication *sharedApplication;
-
-+ (Indicators *) sharedIndicators;
-- (void) start:(UIViewController*)controller;
-- (void) stop;
++ (void) show;
++ (void) dismiss;
 
 @end

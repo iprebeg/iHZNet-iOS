@@ -102,7 +102,7 @@ static HZiface *shared = nil;
     connection = nil;
     receivedData = nil;
     
-    [[Indicators sharedIndicators] stop];
+    [Indicators show];
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"Pokušajte ponovno!" otherButtonTitles:nil];
@@ -159,7 +159,7 @@ static HZiface *shared = nil;
     shared.odlazniKolodvor = odlazni;
     shared.dolazniKolodvor = dolazni;
     
-    [[Indicators sharedIndicators]stop];
+    [Indicators dismiss];
     
     shared.loaded = YES;
 }

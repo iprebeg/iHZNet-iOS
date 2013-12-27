@@ -71,7 +71,7 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
 {
     prolazistaTable.hidden = YES;
     
-    [[Indicators sharedIndicators] start:self];
+    [Indicators show];
     
     //NSString *req = [NSString stringWithFormat:kLiveInfoURLString,iface.odlazniKolodvor.idKolodvora,iface.dolazniKolodvor.idKolodvora,vrijeme, iface.dv];	
     
@@ -118,7 +118,7 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"UPOZORENJE!" message:@"Neuspjelo spajanje na poslužitelj!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:@"Pokušajte ponovno!",nil];	
     
-    [[Indicators sharedIndicators] stop];
+    [Indicators dismiss];
     
     [alert show];
     
@@ -141,7 +141,7 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:@"POKUŠAJTE PONOVNO!" message:@"Live Info nije dostupan!" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
         
-        [[Indicators sharedIndicators] stop];
+        [Indicators dismiss];
         
         [alert show];
         
@@ -152,7 +152,7 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
     }
 	
 	self.prolazista = [rezParser getLiveInfo];	
-    [[Indicators sharedIndicators] stop];
+    [Indicators dismiss];
 	[[self prolazistaTable] reloadData];
     
 
@@ -189,7 +189,7 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
     
     if (buttonIndex == 0)
     {
-        [[Indicators sharedIndicators] start:self];
+        [Indicators show];
         
 		[self getLiveInfo];
 		[prolazistaTable reloadData];
