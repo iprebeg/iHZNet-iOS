@@ -15,11 +15,16 @@
 #import "RezultatiViewController.h"
 #import "FavoritiViewController.h"
 #import "InfoViewController.h"
+#import <ActionSheetPicker/ActionSheetPicker.h>
+#import "HZiface.h"
+#import "Appirater.h"
+#import "AppDelegate.h"
+#import "Favorit.h"
+#import "Indicators.h"
 
 #define kOdlazniIndex 0
 #define kDolazniIndex 1
 #define kVrijemeIndex 2
-
 
 @interface MainViewController : UIViewController <UIActionSheetDelegate>
 

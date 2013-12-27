@@ -7,16 +7,10 @@
 //
 
 #import "MainViewController.h"
-#import "HZiface.h"
-#import "Appirater.h"
-#import "AppDelegate.h"
-#import "Favorit.h"
-
-#import <ActionSheetPicker/ActionSheetPicker.h>
 
 static BOOL backendLoaded = NO;
 static NSString *CellIdentifier = @"CellIdentifier";
-static UIAlertView *loadingView = nil;
+//static UIAlertView *loadingView = nil;
 
 @implementation MainViewController
 
@@ -112,7 +106,7 @@ static UIAlertView *loadingView = nil;
     
     [izbornikTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
     
-    [loadingView dismissWithClickedButtonIndex:0 animated:YES];
+    [Indicators dismiss];
 }
 
 - (IBAction)searchButtonPressed:(id)sender
@@ -264,18 +258,8 @@ static UIAlertView *loadingView = nil;
     
     if (![HZiface isLoaded]) {
     
-        loadingView = [[UIAlertView alloc] initWithTitle:@"Učitavanje kolodvora\nMolimo pričekajte..." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
-        [loadingView show];
-
+        [Indicators showWithStatus:@"Učitavanje kolodvora - molimo pričekajte"];
         
-        UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    
-        // Adjust the indicator so it is up a few pixels from the bottom of the alert
-        indicator.center = CGPointMake(loadingView.bounds.size.width / 2, loadingView.bounds.size.height - 50);
-        [indicator startAnimating];
-        [loadingView addSubview:indicator];
-        ////
-    
         searchButton.hidden = YES;
         
         HZiface *iface = [HZiface sharedHZiface];
@@ -288,8 +272,6 @@ static UIAlertView *loadingView = nil;
     
     [izbornikTable reloadData];
 }
-
-
 
 -(void)viewWillAppear:(BOOL)animated
 {
