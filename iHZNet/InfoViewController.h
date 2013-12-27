@@ -10,19 +10,8 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 
-@interface InfoViewController : UIViewController
-<MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
+@interface InfoViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
 
-{
-    UIButton *rateButton;
-    UIButton *reportButton;
-}
-
-@property (nonatomic, strong) IBOutlet UIButton *rateButton;
-@property (nonatomic, strong) IBOutlet UIButton *reportButton;
-
-- (IBAction)rateButtonPressed:(id)sender;
-- (IBAction)reportButtonPressed:(id)sender;
-- (IBAction)socialButtonPressed:(id)sender;
+- (IBAction)moreButtonPressed:(id)sender;
 
 @end

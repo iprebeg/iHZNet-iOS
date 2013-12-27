@@ -766,7 +766,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="Yu5-Me-IyF"/>
                     <navigationItem key="navigationItem" title="Info" id="pW3-pX-DN0">
-                        <barButtonItem key="leftBarButtonItem" image="links" id="0Z0-vT-JBe"/>
+                        <barButtonItem key="leftBarButtonItem" image="links" id="0Z0-vT-JBe">
+                            <connections>
+                                <action selector="moreButtonPressed:" destination="VKc-GN-9VS" id="NTK-Up-Ons"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCP-kV-FW0" userLabel="First Responder" sceneMemberID="firstResponder"/>

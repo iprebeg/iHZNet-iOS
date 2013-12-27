@@ -34,4 +34,6 @@
 
     #define kFavoritTableViewCellHeight 44
 
+    #define kHZWebUrl @"http://www.hzpp.hr"
+
 #endif
