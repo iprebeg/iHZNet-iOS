@@ -29,8 +29,6 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 
 -(void)getRezultati
 {
-    rezultatiTable.hidden = YES;
-    
     [Indicators show];
 
     HZiface *iface = [HZiface sharedHZiface];
@@ -42,10 +40,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     
     NSString *vrijeme = [df stringFromDate:iface.vrijeme];	
     
-    
-    
     NSString *req = [NSString stringWithFormat:kURLString,iface.odlazniKolodvor.idKolodvora,iface.dolazniKolodvor.idKolodvora,vrijeme, iface.dv];	
-   
     
     req = [req stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
@@ -152,8 +147,6 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 
     UILabel *datumLabel = (UILabel *)[self.view viewWithTag:kDatumTag];
     datumLabel.text = datum;
-    
-    rezultatiTable.hidden = NO;
 }
 
  // alert button handler

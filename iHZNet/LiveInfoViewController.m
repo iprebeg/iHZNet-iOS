@@ -69,14 +69,9 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
 
 -(void)getLiveInfo
 {
-    prolazistaTable.hidden = YES;
-    
     [Indicators show];
     
-    //NSString *req = [NSString stringWithFormat:kLiveInfoURLString,iface.odlazniKolodvor.idKolodvora,iface.dolazniKolodvor.idKolodvora,vrijeme, iface.dv];	
-    
     NSString *req = [NSString stringWithFormat:kLiveInfoURLString, linija.nazivLinije];	
-    
     
     req = [req stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
@@ -155,8 +150,6 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
     [Indicators dismiss];
 	[[self prolazistaTable] reloadData];
     
-
-    
     if ([self.prolazista count] == 0)
     {
         UIActionSheet *as = [[UIActionSheet alloc]
@@ -165,12 +158,8 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
         as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
         [as showInView:self.view];
         
-        
-        
         return;
     }
-
-    prolazistaTable.hidden = NO;
 }
 
 -(void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
