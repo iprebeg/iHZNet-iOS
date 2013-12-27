@@ -614,7 +614,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="H7H-vq-vwu">
-                        <barButtonItem key="rightBarButtonItem" image="switch" id="Bqa-YJ-Bvd">
+                        <barButtonItem key="rightBarButtonItem" image="refresh" id="Bqa-YJ-Bvd">
                             <connections>
                                 <action selector="refreshButtonPressed:" destination="eVU-DC-PLC" id="gZZ-2e-eHt"/>
                             </connections>
@@ -765,7 +765,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="Yu5-Me-IyF"/>
-                    <navigationItem key="navigationItem" title="Info" id="pW3-pX-DN0"/>
+                    <navigationItem key="navigationItem" title="Info" id="pW3-pX-DN0">
+                        <barButtonItem key="leftBarButtonItem" image="links" id="0Z0-vT-JBe"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCP-kV-FW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -799,6 +801,8 @@
         <image name="REZERVACIJA.png" width="20" height="20"/>
         <image name="home" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
+        <image name="links" width="25" height="25"/>
+        <image name="refresh" width="25" height="25"/>
         <image name="star" width="30" height="30"/>
         <image name="starplus" width="25" height="25"/>
         <image name="switch" width="25" height="25"/>

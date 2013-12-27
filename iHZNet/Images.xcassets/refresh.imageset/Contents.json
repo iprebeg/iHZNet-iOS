@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "switch.png"
+      "filename" : "refresh.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "switch@2x.png"
+      "filename" : "refresh@2x.png"
     }
   ],
   "info" : {
