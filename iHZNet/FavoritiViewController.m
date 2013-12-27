@@ -34,10 +34,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (IBAction)toggleEdit:(id)sender {
     [self.favoritiTable setEditing:!self.favoritiTable.editing animated:YES];
+
     if (self.favoritiTable.editing)
-        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
+        [self.navigationItem.leftBarButtonItem setTitle:@"Done"];
     else
-        [self.navigationItem.rightBarButtonItem setTitle:@"Delete"];
+        [self.navigationItem.leftBarButtonItem setTitle:@"Edit"];
 }
 
 - (void)fetchRecords {   
@@ -173,13 +174,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     favoritiTable.backgroundColor = [UIColor clearColor];
     favoritiTable.opaque = NO;
     favoritiTable.backgroundView = nil;
-    
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Edit"
-                                   style:UIBarButtonItemStyleBordered
-                                   target:self
-                                   action:@selector(toggleEdit:)];
-    self.navigationItem.rightBarButtonItem = editButton;
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
