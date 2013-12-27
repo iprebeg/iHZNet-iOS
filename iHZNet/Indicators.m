@@ -13,13 +13,13 @@
 + (void) showWithStatus:(NSString *)status
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
-    [SVProgressHUD showWithStatus:status];
+    [SVProgressHUD showWithStatus:status maskType:SVProgressHUDMaskTypeBlack];
 }
 
 + (void) show
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
-    [SVProgressHUD show];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 + (void) dismiss
