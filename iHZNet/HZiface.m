@@ -79,7 +79,7 @@ static HZiface *shared = nil;
     
 	if (con) {
         receivedData = [NSMutableData data];
-		NSLog(@"created connection");
+		//NSLog(@"created connection");
 	} else {
 		NSLog(@"failed to create connection");		
 	}

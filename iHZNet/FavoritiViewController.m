@@ -171,10 +171,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)viewDidLoad
 {
-    favoritiTable.backgroundColor = [UIColor clearColor];
-    favoritiTable.opaque = NO;
-    favoritiTable.backgroundView = nil;
-    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
     

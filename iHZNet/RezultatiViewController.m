@@ -49,7 +49,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     
     req = [req stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-	NSLog(@"URL: %@",req);
+	//NSLog(@"URL: %@",req);
 	
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:req]
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy

@@ -10,7 +10,6 @@
 
 static BOOL backendLoaded = NO;
 static NSString *CellIdentifier = @"CellIdentifier";
-//static UIAlertView *loadingView = nil;
 
 @implementation MainViewController
 
@@ -26,9 +25,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
         return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-	
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[UITableViewCell alloc]
@@ -246,18 +244,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 - (void)viewDidLoad
 {
-    izbornikTable.backgroundColor = [UIColor clearColor];
-    izbornikTable.opaque = NO;
-    izbornikTable.backgroundView = nil;
-    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;    
     
-    ////
-        
-    
-    if (![HZiface isLoaded]) {
-    
+    if (![HZiface isLoaded]) 
+    {
         [Indicators showWithStatus:@"Učitavanje kolodvora - molimo pričekajte"];
         
         searchButton.hidden = YES;
