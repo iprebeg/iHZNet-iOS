@@ -26,13 +26,13 @@ static NSString *FavoritCellIdentifier = @"FavoritCellIdentifier";
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
    return kFavoritTableViewCellHeight;
 }
 
-- (IBAction)toggleEdit:(id)sender {
+- (IBAction)toggleEdit:(id)sender
+{
     [self.favoritiTable setEditing:!self.favoritiTable.editing animated:YES];
 
     if (self.favoritiTable.editing)
@@ -41,8 +41,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         [self.navigationItem.leftBarButtonItem setTitle:@"Edit"];
 }
 
-- (void)fetchRecords {   
-    
+- (void)fetchRecords
+{
     // Define our table/entity to use  
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Favorit" inManagedObjectContext:managedObjectContext];   
     
@@ -73,12 +73,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     [favoritiTable reloadData];
 }   
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSUInteger row = indexPath.row;  
-    
     
     Favorit *favorit = [favoriti objectAtIndex:row];
     
@@ -98,7 +97,10 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     iface.odlazniKolodvor.idKolodvora = idOd;
     
     //////
+    UINavigationController *nc = [self.tabBarController.viewControllers objectAtIndex:0];
+    [nc popToRootViewControllerAnimated:true];
     [self.tabBarController setSelectedIndex:0];
+    
     //[self.navigationController popViewControllerAnimated:YES];
 }
 
