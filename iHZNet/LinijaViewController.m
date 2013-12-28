@@ -56,7 +56,7 @@ static NSString *FavoritCellIdentifier = @"StajalisteCellIdentifier";
     odVrijemeLabel.text = [stajaliste vrijemeOdlaskaStajaliste];
     
     return cell;
-}       
+}
 
 - (IBAction)liveInfoButtonPressed:(id)sender
 {

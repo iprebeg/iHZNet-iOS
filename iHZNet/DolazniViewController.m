@@ -1,4 +1,4 @@
-    //
+//
 //  OdredisniViewController.m
 //  iHZNet
 //
@@ -12,18 +12,18 @@
 
 @implementation DolazniViewController
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     HZiface *iface = [HZiface sharedHZiface];
     
     NSUInteger row = indexPath.row;
-	Kolodvor *kolodvor = nil;
     
-	if ([savedSearchTerm length] != 0) {
+    Kolodvor *kolodvor = nil;
+    
+	  if ([savedSearchTerm length] != 0) {
         kolodvor = [kolodvoriFiltered objectAtIndex:row];
     }
-	else { 
+	  else { 
         kolodvor = [kolodvori objectAtIndex:row];
     }
     

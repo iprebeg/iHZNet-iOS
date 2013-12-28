@@ -95,7 +95,6 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	
 	//NSLog(@"Succeded loading! loaded %d bytes", [receivedData length]);
 	
 	RezultatiParser *rezParser = [RezultatiParser alloc]; 
@@ -149,8 +148,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     datumLabel.text = datum;
 }
 
- // alert button handler
- -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex 
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1)
     {
@@ -161,32 +159,10 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     }
 }
 
-- (void) viewDidLoad {
+- (void) viewDidLoad
+{
     rezultati = [[NSMutableArray alloc] init ];
-    //rezultatiTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    /*
-    izravniSegmented = [[UISegmentedControl alloc] initWithItems:[[NSArray alloc] initWithObjects:@"Izravni", @"S presjedanjem" , nil]];
-    
-    [izravniSegmented setFrame:CGRectMake(100, 6, 210, 30)];
-    izravniSegmented.segmentedControlStyle = UISegmentedControlStyleBar;
-    izravniSegmented.tintColor = [UIColor grayColor];
-    
-    izravniSegmented.selected = true;
-    
-    [izravniSegmented setSelectedSegmentIndex:0];
-    
-    
-    [izravniSegmented addTarget:self action:@selector(changedSegment) 
-               forControlEvents:UIControlEventValueChanged];
-    
-    
-    //[segment setFrame:[self.navigationController.toolbar bounds]];
-    
-    ///
-    [self.navigationController.navigationBar addSubview:izravniSegmented];
-    */
-
     [izravniSegmented addTarget:self action:@selector(changedSegment)
                forControlEvents:UIControlEventValueChanged];
 
@@ -227,16 +203,13 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
     }
 }
 
-
-
 - (void) viewWillDisappear:(BOOL)animated
 {
     [con cancel];
     [Indicators dismiss];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSUInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
@@ -249,7 +222,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     //NSLog(@"there is %d rez", [rezultati count]);
 	return [rezultati count]; 
 }
@@ -260,7 +234,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   	return sectionHeader;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSUInteger row = indexPath.row;  
     NSUInteger section = indexPath.section;
@@ -292,7 +267,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     }    
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"linijaSegue"])
     {
@@ -304,8 +279,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
--(NSInteger)tableView:(UITableView*)tableView
-numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
 	
     Putovanje *putovanje = [rezultati objectAtIndex:section];
     NSUInteger num = 0;
@@ -321,9 +295,8 @@ numberOfRowsInSection:(NSInteger)section {
 }	
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSUInteger row = indexPath.row;
     NSUInteger section = indexPath.section;
     

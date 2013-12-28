@@ -63,7 +63,9 @@ static NSString *CellIdentifier = @"CellIdentifier";
 	return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSInteger row = [indexPath row];    
     
@@ -82,8 +84,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
     }        
 }
 
-- (void)dateWasSelected:(NSDate *)selectedDate element:(id)element {
-    
+- (void)dateWasSelected:(NSDate *)selectedDate element:(id)element 
+{    
     HZiface *iface = [HZiface sharedHZiface];
     iface.vrijeme = selectedDate;
     
