@@ -1,0 +1,28 @@
+//
+// Prefix header for all source files of the 'iHZNet' target in the 'iHZNet' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+    #define API_HEROKU @"http://ihznet.herokuapp.com"
+  
+    #define API_URL API_HEROKU
+
+    #define kURLKolodvori [API_URL stringByAppendingString:@"/listaKolodvora"]
+
+    #define kURLString [API_URL stringByAppendingString:@"/raspored?NKOD1=%d&NKDO1=%d&DT=%@&DV=%@"]
+
+    #define kLiveInfoURLString [API_URL stringByAppendingString:@"/liveInfo?VL=%@"]
+
+
+    #define kStajalisteTableCellHeight 30
+
+    #define kProlazisteTableViewCellHeight 30
+
+    #define kFavoritTableViewCellHeight 44
+
+    #define kHZWebUrl @"http://www.hzpp.hr"
+
+#endif

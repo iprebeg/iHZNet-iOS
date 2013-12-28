@@ -1,0 +1,7 @@
+language: objective-c
+
+before_install: 
+  - rvm 1.9.3
+
+script :
+  - xctool -workspace iHZNet.xcworkspace -scheme iHZNet -sdk iphonesimulator build test -freshInstall -freshSimulator
