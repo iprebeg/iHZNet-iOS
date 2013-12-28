@@ -29,21 +29,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Odlazni kolodvor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="III-mQ-Ot2">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odlazni kolodvor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="III-mQ-Ot2">
                                                     <rect key="frame" x="10" y="10" width="145" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dolazni kolodvor" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avR-de-h6v">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dolazni kolodvor" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avR-de-h6v">
                                                     <rect key="frame" x="160" y="10" width="145" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="m2B-fU-stK"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="avR-de-h6v" firstAttribute="top" secondItem="aYP-tT-rEi" secondAttribute="top" constant="10" id="OuW-sg-5B1"/>
+                                                <constraint firstItem="avR-de-h6v" firstAttribute="leading" secondItem="III-mQ-Ot2" secondAttribute="trailing" constant="5" id="V3k-UW-ytV"/>
+                                                <constraint firstItem="III-mQ-Ot2" firstAttribute="top" secondItem="avR-de-h6v" secondAttribute="top" id="bBZ-nJ-4tf"/>
+                                                <constraint firstAttribute="trailing" secondItem="avR-de-h6v" secondAttribute="trailing" constant="15" id="eeE-rO-OZH"/>
+                                                <constraint firstItem="III-mQ-Ot2" firstAttribute="baseline" secondItem="avR-de-h6v" secondAttribute="baseline" id="jtf-vC-FGs"/>
+                                                <constraint firstAttribute="bottom" secondItem="avR-de-h6v" secondAttribute="bottom" constant="13" id="mbP-Ue-xjk"/>
+                                                <constraint firstItem="III-mQ-Ot2" firstAttribute="leading" secondItem="aYP-tT-rEi" secondAttribute="leading" constant="10" id="x5p-mw-b6b"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
