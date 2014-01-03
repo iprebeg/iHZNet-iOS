@@ -18,7 +18,7 @@
                          initWithTitle:@"Poveznice" delegate:self cancelButtonTitle:@"Odustani" destructiveButtonTitle:nil otherButtonTitles:@"Prijavi problem", @"Ocijeni aplikaciju", @"Hrvatske željeznice", nil];
     
     as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-    [as showInView:self.view];
+    [as showFromTabBar:self.tabBarController.tabBar];
 }
 
 - (void) actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
