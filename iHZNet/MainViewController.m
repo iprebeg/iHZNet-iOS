@@ -111,6 +111,9 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 - (IBAction)searchButtonPressed:(id)sender
 {
+    HZiface *iface = [HZiface sharedHZiface];
+    iface.dv = @"D";
+
     //[self.navigationController pushViewController:rezultatiController animated:YES];
     [self performSegueWithIdentifier:@"rezultatiSegue" sender:self];
 }
