@@ -143,7 +143,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
         initWithTitle:@"Dodati liniju u favorite?" delegate:self cancelButtonTitle:@"Odustani" destructiveButtonTitle:@"Dodaj" otherButtonTitles:nil];
     
     as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-    [as showInView:self.view];
+    [as showFromTabBar:self.tabBarController.tabBar];
 }
 
 -(void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
