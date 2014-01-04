@@ -142,7 +142,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
         UIActionSheet *as = [[UIActionSheet alloc]
                               initWithTitle:@"Nisu pronađena putovanja!" delegate:self cancelButtonTitle:segmentButtonTitle destructiveButtonTitle:@"Promijeni pretragu" otherButtonTitles:nil];
         
-        [as showInView:self.view];
+        [as showFromTabBar:self.tabBarController.tabBar];
         
         return;
     }
