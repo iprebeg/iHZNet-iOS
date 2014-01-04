@@ -12,26 +12,9 @@
 #import "Kolodvor.h"
 #import "Stajaliste.h"
 #import "Prolaziste.h"
+#import "Raspored.h"
 
-@interface RezultatiParser : NSObject <NSXMLParserDelegate> {
-    
-    Putovanje *currentPutovanje;
-    Linija *currentLinija;
-    Kolodvor *currentKolodvor;
-    Stajaliste *currentStajaliste;
-    Prolaziste *currentProlaziste;
-
-    NSMutableArray *currentStajalista;
-    NSMutableArray *currentLinije;
-    NSMutableArray *currentOznake;
-    
-    NSMutableArray *kolodvori;
-	NSMutableArray *rezultati;
-    NSMutableArray *prolazista;
-
-    NSMutableString *currentProperty;
-
-}
+@interface RezultatiParser : NSObject <NSXMLParserDelegate> 
 
 @property (strong, nonatomic) Putovanje *currentPutovanje;
 @property (strong, nonatomic) Linija *currentLinija;
@@ -42,16 +25,18 @@
 @property (strong, nonatomic) NSMutableArray *currentStajalista;
 @property (strong, nonatomic) NSMutableArray *currentLinije;
 @property (strong, nonatomic) NSMutableArray *currentOznake;
+@property (strong, nonatomic) NSMutableArray *prolazista;
 
 @property (strong, nonatomic) NSMutableArray *kolodvori;
-@property (strong, nonatomic) NSMutableArray *rezultati;
 
 @property (strong, nonatomic) NSString *currentProperty;
 
+@property (strong, nonatomic) Raspored *raspored;
+
 - (BOOL)parseXML:(NSData *)xml;
-- (NSMutableArray*)getRezultati;
 - (NSMutableArray*)getKolodvori;
 - (NSMutableArray*)getLiveInfo;
 
+- (Raspored*)getRaspored;
 
 @end

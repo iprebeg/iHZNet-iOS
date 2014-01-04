@@ -21,6 +21,7 @@
 @synthesize rezultatiTable;
 @synthesize receivedData;
 @synthesize izravniSegmented;
+@synthesize waitpoll_count;
 
 static NSURLConnection *con = nil;
 
@@ -48,7 +49,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 	
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:req]
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                         timeoutInterval:120.0];
+                                         timeoutInterval:10.0];
 	
 	con = [[NSURLConnection alloc] initWithRequest:request delegate:self]; 
     
@@ -114,9 +115,19 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
         return;
     }
 	
-	self.rezultati = [rezParser getRezultati];	
-    [Indicators dismiss];
-	[[self rezultatiTable] reloadData];
+
+    Raspored *raspored = [rezParser getRaspored];
+    if ([raspored waitpoll] == true && waitpoll_count < 5)
+    {
+      waitpoll_count++;
+      [self performSelector:@selector(getRezultati) withObject:nil afterDelay:11.0];
+      return;
+    }
+    waitpoll_count = 0;
+
+  self.rezultati = [raspored putovanja];	
+  [Indicators dismiss];
+  [[self rezultatiTable] reloadData];
     
     
     NSString *segmentButtonTitle = nil;
@@ -161,6 +172,8 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
 
 - (void) viewDidLoad
 {
+    waitpoll_count = 0;
+
     rezultati = [[NSMutableArray alloc] init ];
     
     [izravniSegmented addTarget:self action:@selector(changedSegment)
