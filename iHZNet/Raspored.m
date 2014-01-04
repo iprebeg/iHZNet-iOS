@@ -11,4 +11,6 @@
 
 @implementation Raspored
 
+@synthesize putovanja;
+
 @end

@@ -52,5 +52,6 @@
 @property (copy, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *izravniSegmented;
 @property (strong, nonatomic) Linija *selectedLinija;
+@property (nonatomic) int waitpoll_count;
 
 @end

@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Raspored : NSObject {
-    
-}
+@interface Raspored : NSObject
+
+@property (strong, nonatomic) NSMutableArray *putovanja;
+@property (nonatomic) BOOL waitpoll;
 
 @end
