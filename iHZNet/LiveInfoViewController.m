@@ -156,8 +156,8 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
                              initWithTitle:@"Live info za traženu liniju trenutno nije dostupan!" delegate:self cancelButtonTitle:@"Povratak" destructiveButtonTitle:@"Pokušaj ponovo" otherButtonTitles:nil];
         
         as.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-        [as showInView:self.view];
-        
+        [as showFromTabBar:self.tabBarController.tabBar];
+
         return;
     }
 }

@@ -7,12 +7,12 @@
     #import <UIKit/UIKit.h>
 
     #define API_HEROKU @"http://ihznet.herokuapp.com"
-  
+
     #define API_URL API_HEROKU
 
     #define kURLKolodvori [API_URL stringByAppendingString:@"/listaKolodvora"]
 
-    #define kURLString [API_URL stringByAppendingString:@"/raspored?NKOD1=%d&NKDO1=%d&DT=%@&DV=%@"]
+    #define kURLString [API_URL stringByAppendingString:@"/cachedraspored?NKOD1=%d&NKDO1=%d&DT=%@&DV=%@"]
 
     #define kLiveInfoURLString [API_URL stringByAppendingString:@"/liveInfo?VL=%@"]
 

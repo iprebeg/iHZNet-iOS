@@ -28,7 +28,9 @@ static UIViewController *controller = nil;
 @synthesize currentProperty;
 
 @synthesize kolodvori;
-@synthesize rezultati;
+@synthesize prolazista;
+
+@synthesize raspored;
 
 -(BOOL)checkForSubstring:(NSString*)substring inString:(NSString*)string
 {
@@ -44,9 +46,9 @@ static UIViewController *controller = nil;
 	return kolodvori;
 }
 
-- (NSMutableArray*)getRezultati
+- (Raspored*)getRaspored
 {
-	return rezultati;
+	return raspored;
 }
 
 - (NSMutableArray*)getLiveInfo
@@ -138,8 +140,9 @@ static UIViewController *controller = nil;
     /* raspored */
     
     if ( [elementName isEqualToString:@"raspored"]) {
-        if (!rezultati)
-            rezultati = [[NSMutableArray alloc] init];
+        raspored = [[Raspored alloc] init];
+        if (raspored.putovanja == nil)
+            raspored.putovanja = [[NSMutableArray alloc] init];
         return;
     }
     
@@ -152,6 +155,7 @@ static UIViewController *controller = nil;
     }
         
     if ( 
+        [elementName isEqualToString:@"waitpoll"               ] || 
         [elementName isEqualToString:@"izravno"                ] || 
         [elementName isEqualToString:@"brojPresjedanja"        ] ||
         [elementName isEqualToString:@"ukupnoTrajanjeVoznje"   ] ||
@@ -231,6 +235,10 @@ static UIViewController *controller = nil;
     if ( [elementName isEqualToString:@"liveInfo"]) {
         return;
     }
+
+    if ( [elementName isEqualToString:@"raspored"]) {
+        return;
+    }
     
     /* elementi Prolazista */
     
@@ -304,7 +312,7 @@ static UIViewController *controller = nil;
     /* elementi putovanje */
     
     if ( [elementName isEqualToString:@"putovanje"] ) {
-        [rezultati addObject:currentPutovanje];
+        [raspored.putovanja addObject:currentPutovanje];
         return;
     }
     
@@ -313,6 +321,15 @@ static UIViewController *controller = nil;
             [currentPutovanje setIzravno:false];
         else
             [currentPutovanje setIzravno:true];
+        
+        return;
+    }
+
+    if ( [elementName isEqualToString:@"waitpoll"] ) {
+        if ([currentProperty isEqualToString:@"false"])
+            [raspored setWaitpoll:false];
+        else
+            [raspored setWaitpoll:true];
         
         return;
     }
@@ -421,7 +438,7 @@ static UIViewController *controller = nil;
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     if (self.currentProperty) {
-        [currentProperty appendString:string];
+        currentProperty = [currentProperty stringByAppendingString:string];
     }
 }
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
