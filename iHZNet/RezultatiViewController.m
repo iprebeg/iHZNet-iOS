@@ -406,7 +406,7 @@ static NSString *PutovanjeCellIdentifier = @"PutovanjeCellIdentifier";
         doVrijemeLabel.text = zadnjaLinija.vrijemeDolaska;
         odVrijemeLabel.text = prvaLinija.vrijemeOdlaska;
         
-        presjedanjeLabel.text = [NSString stringWithFormat:@"%d", putovanje.brojPresjedanja];
+        presjedanjeLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)putovanje.brojPresjedanja];
         voznjaLabel.text = putovanje.trajanjeVoznje;
         cekanjeLabel.text = putovanje.trajanjeCekanja;
         putovanjeLabel.text = putovanje.trajanjePutovanja;
