@@ -163,8 +163,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
     
     HZiface *iface = [HZiface sharedHZiface];
     
-    NSNumber *idDo = [NSNumber numberWithInt:iface.dolazniKolodvor.idKolodvora];
-    NSNumber *idOd = [NSNumber numberWithInt:iface.odlazniKolodvor.idKolodvora];
+    NSNumber *idDo = [NSNumber numberWithInt:(int)iface.dolazniKolodvor.idKolodvora];
+    NSNumber *idOd = [NSNumber numberWithInt:(int)iface.odlazniKolodvor.idKolodvora];
     
     NSString *nazDo = [NSString stringWithString:iface.dolazniKolodvor.naziv];
     NSString *nazOd = [NSString stringWithString:iface.odlazniKolodvor.naziv];
@@ -234,11 +234,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
         {
             if ([[[f nazivOdlazniKolodvor] uppercaseString] isEqualToString:[[k naziv] uppercaseString]])
             {
-                f.idOdlazniKolodvor = [NSNumber numberWithInt:[k idKolodvora]];
+                f.idOdlazniKolodvor = [NSNumber numberWithInt:(int)[k idKolodvora]];
             } 
             if ([[[f nazivDolazniKolodvor] uppercaseString] isEqualToString:[[k naziv] uppercaseString]])
             {
-                f.idDolazniKolodvor = [NSNumber numberWithInt:[k idKolodvora]];
+                f.idDolazniKolodvor = [NSNumber numberWithInt:(int)[k idKolodvora]];
             }
         }
     }

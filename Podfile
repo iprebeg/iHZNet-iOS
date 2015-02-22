@@ -1,7 +1,7 @@
-platform :ios, '6.1'
+platform :ios, '8'
 
 pod 'Appirater'
-pod 'ActionSheetPicker', :head
+pod 'ActionSheetPicker-3.0'
 pod 'SVProgressHUD'
 pod 'SVWebViewController'
 
