@@ -15,7 +15,7 @@
 #import "RezultatiViewController.h"
 #import "FavoritiViewController.h"
 #import "InfoViewController.h"
-#import <ActionSheetPicker/ActionSheetPicker.h>
+#import <ActionSheetPicker-3.0/ActionSheetDatePicker.h>
 #import "HZiface.h"
 #import "Appirater.h"
 #import "AppDelegate.h"
