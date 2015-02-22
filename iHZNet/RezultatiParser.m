@@ -444,10 +444,10 @@ static UIViewController *controller = nil;
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
     
     
-    NSString *error = [NSString stringWithFormat:@"Error %i, Description: %@, Line: %i, Column: %i", 
-                    [parseError code],
-                    [[parser parserError] localizedDescription], [parser lineNumber],
-                    [parser columnNumber]];
+    NSString *error = [NSString stringWithFormat:@"Error %li, Description: %@, Line: %li, Column: %li", 
+                    (long)[parseError code],
+                    [[parser parserError] localizedDescription], (long)[parser lineNumber],
+                    (long)[parser columnNumber]];
     
     NSLog(@"%@", error);
 

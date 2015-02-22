@@ -174,7 +174,7 @@ static NSString *ProlazisteCellIdentifier = @"ProlazisteCellIdentifier";
 // alert button handler
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex 
 {
-    NSLog(@"index is %d", buttonIndex);
+    NSLog(@"index is %ld", (long)buttonIndex);
     
     if (buttonIndex == 0)
     {
